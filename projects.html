@@ -29,17 +29,14 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Fluid global container spacing */
         .container { 
             max-width: 1100px; 
             margin: 0 auto; 
             padding: 0 1.25rem; 
         }
-        @media (min-width: 576px) {
-            .container { padding: 0 2rem; }
-        }
+        @media (min-width: 576px) { .container { padding: 0 2rem; } }
 
-        /* Navigation Header - Touch friendly & responsive layout */
+        /* Navigation Header - Fully Unified 5-Item Responsive Menu */
         header {
             border-bottom: 1px solid var(--border-color);
             background-color: rgba(250, 250, 250, 0.8);
@@ -56,7 +53,7 @@
             gap: 0.75rem;
             padding: 1.25rem 0;
         }
-        @media (min-width: 576px) {
+        @media (min-width: 900px) {
             .nav-wrapper {
                 flex-direction: row;
                 justify-content: space-between;
@@ -74,33 +71,34 @@
         }
         nav ul { 
             display: flex; 
+            flex-wrap: wrap;
+            justify-content: center;
             list-style: none; 
-            gap: 1.5rem; 
+            gap: 1.25rem; 
         }
-        @media (min-width: 576px) {
-            nav ul { gap: 2.5rem; }
-        }
+        @media (min-width: 576px) { nav ul { gap: 2rem; } }
         
         nav a { 
             text-decoration: none; 
             color: var(--text-muted); 
-            font-size: 0.9rem; 
+            font-size: 0.85rem; 
             font-weight: 500; 
             transition: var(--transition); 
             position: relative; 
             padding: 0.25rem 0;
         }
+        @media (min-width: 400px) { nav a { font-size: 0.9rem; } }
         nav a:hover, nav a.active { color: var(--accent); }
         nav a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1.5px; bottom: -2px; left: 0; background-color: var(--accent); transition: transform 0.25s ease-out; }
         nav a:hover::after, nav a.active::after { transform: scaleX(1); }
 
-        /* Responsive Layout & Fluid Typography */
+        /* Content Layout */
         .page-section { padding: 3rem 0; }
         @media (min-width: 768px) { .page-section { padding: 5rem 0; } }
 
         .page-title { 
             font-family: 'Playfair Display', serif; 
-            font-size: 2rem; /* Mobile first scale */
+            font-size: 2rem; 
             line-height: 1.2;
             font-weight: 400; 
             color: var(--accent); 
@@ -116,7 +114,7 @@
         }
         @media (min-width: 768px) { .page-subtitle { font-size: 1.1rem; margin-bottom: 4rem; } }
 
-        /* Multi-screen adaptive Grid */
+        /* Grid System */
         .projects-grid { 
             display: grid; 
             grid-template-columns: 1fr; 
@@ -147,7 +145,6 @@
         
         .project-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
         
-        /* Flex tags wrap perfectly on narrow viewports */
         .tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
         .tech-tag { background: #f0f0f0; color: var(--text-main); font-size: 0.78rem; font-weight: 500; padding: 0.3rem 0.75rem; border-radius: 4px; }
 
