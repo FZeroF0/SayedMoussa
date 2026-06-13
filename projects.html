@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects & Architecture</title>
+    <title>Projects & Economic Insights</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
@@ -20,6 +20,7 @@
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
@@ -28,57 +29,129 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        /* Fluid global container spacing */
+        .container { 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 0 1.25rem; 
+        }
+        @media (min-width: 576px) {
+            .container { padding: 0 2rem; }
+        }
 
-        /* Navigation Header */
+        /* Navigation Header - Touch friendly & responsive layout */
         header {
             border-bottom: 1px solid var(--border-color);
             background-color: rgba(250, 250, 250, 0.8);
             backdrop-filter: blur(10px);
             position: sticky;
-            top: 0; z-index: 100;
+            top: 0; 
+            z-index: 100;
         }
-        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; height: 80px; }
-        .logo { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.35rem; color: var(--accent); text-decoration: none; }
-        nav ul { display: flex; list-style: none; gap: 2.5rem; }
-        nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: var(--transition); position: relative; }
+        .nav-wrapper { 
+            display: flex; 
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            gap: 0.75rem;
+            padding: 1.25rem 0;
+        }
+        @media (min-width: 576px) {
+            .nav-wrapper {
+                flex-direction: row;
+                justify-content: space-between;
+                height: 80px;
+                padding: 0;
+            }
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 600; 
+            font-size: 1.35rem; 
+            color: var(--accent); 
+            text-decoration: none; 
+        }
+        nav ul { 
+            display: flex; 
+            list-style: none; 
+            gap: 1.5rem; 
+        }
+        @media (min-width: 576px) {
+            nav ul { gap: 2.5rem; }
+        }
+        
+        nav a { 
+            text-decoration: none; 
+            color: var(--text-muted); 
+            font-size: 0.9rem; 
+            font-weight: 500; 
+            transition: var(--transition); 
+            position: relative; 
+            padding: 0.25rem 0;
+        }
         nav a:hover, nav a.active { color: var(--accent); }
-        nav a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1.5px; bottom: -6px; left: 0; background-color: var(--accent); transition: transform 0.25s ease-out; }
+        nav a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1.5px; bottom: -2px; left: 0; background-color: var(--accent); transition: transform 0.25s ease-out; }
         nav a:hover::after, nav a.active::after { transform: scaleX(1); }
 
-        /* Content Layout */
-        .page-section { padding: 5rem 0; }
-        .page-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 400; color: var(--accent); margin-bottom: 1rem; }
-        .page-subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 4rem; max-width: 600px; }
+        /* Responsive Layout & Fluid Typography */
+        .page-section { padding: 3rem 0; }
+        @media (min-width: 768px) { .page-section { padding: 5rem 0; } }
 
-        /* Grid System for Projects */
-        .projects-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
-        @media (min-width: 768px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
+        .page-title { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2rem; /* Mobile first scale */
+            line-height: 1.2;
+            font-weight: 400; 
+            color: var(--accent); 
+            margin-bottom: 1rem; 
+        }
+        @media (min-width: 768px) { .page-title { font-size: 2.8rem; } }
+
+        .page-subtitle { 
+            color: var(--text-muted); 
+            font-size: 1rem; 
+            margin-bottom: 2.5rem; 
+            max-width: 600px; 
+        }
+        @media (min-width: 768px) { .page-subtitle { font-size: 1.1rem; margin-bottom: 4rem; } }
+
+        /* Multi-screen adaptive Grid */
+        .projects-grid { 
+            display: grid; 
+            grid-template-columns: 1fr; 
+            gap: 1.5rem; 
+        }
+        @media (min-width: 768px) { .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; } }
 
         .project-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 6px;
-            padding: 2.5rem;
+            padding: 1.5rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             transition: var(--transition);
         }
+        @media (min-width: 576px) { .project-card { padding: 2.5rem; } }
+        
         .project-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 30px rgba(0,0,0,0.02);
             border-color: #adadad;
         }
 
-        .project-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 600; color: var(--accent); margin-bottom: 1rem; }
+        .project-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 600; color: var(--accent); margin-bottom: 1rem; }
+        @media (min-width: 576px) { .project-title { font-size: 1.5rem; } }
+        
         .project-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
         
-        /* Tech Stack Labels */
+        /* Flex tags wrap perfectly on narrow viewports */
         .tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
         .tech-tag { background: #f0f0f0; color: var(--text-main); font-size: 0.78rem; font-weight: 500; padding: 0.3rem 0.75rem; border-radius: 4px; }
 
-        .project-link { text-decoration: none; color: var(--accent); font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .project-link { text-decoration: none; color: var(--accent); font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.5rem 0; }
         .project-link:hover { opacity: 0.7; }
     </style>
 </head>
@@ -99,36 +172,34 @@
     </header>
 
     <main class="container page-section">
-        <h1 class="page-title">Selected Projects</h1>
-        <p class="page-subtitle">A collection of custom infrastructure builds, technical platforms, and automated tools engineering engineered for stability and performance.</p>
+        <h1 class="page-title">Selected Projects & Analyses</h1>
+        <p class="page-subtitle">A curation of quantitative models, industry reports, and macroeconomic analysis applied to global financial climates and public policy parameters.</p>
 
         <div class="projects-grid">
-            <!-- Project Card 1 -->
             <div class="project-card">
                 <div>
-                    <h2 class="project-title">Automated Infrastructure Monitor</h2>
-                    <p class="project-desc">A lightweight service uptime monitor that running automated health diagnostic routines, tracking latency spikes, and generating local metrics pipelines.</p>
+                    <h2 class="project-title">Macroeconomic Inflation Forecasting Model</h2>
+                    <p class="project-desc">Developed a dynamic predictive index parsing structural supply chain constraints and fiscal policy shifts to map multi-quarter core CPI trajectory profiles.</p>
                     <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Systems Automation</span>
-                        <span class="tech-tag">Network Telemetry</span>
+                        <span class="tech-tag">Time-Series Analytics</span>
+                        <span class="tech-tag">R Studio</span>
+                        <span class="tech-tag">Fiscal Policy Brief</span>
                     </div>
                 </div>
-                <a href="#" class="project-link">View Source Code &rarr;</a>
+                <a href="#" class="project-link">Read Full Report &rarr;</a>
             </div>
 
-            <!-- Project Card 2 -->
             <div class="project-card">
                 <div>
-                    <h2 class="project-title">Secure Network Scanner</h2>
-                    <p class="project-desc">An interactive dual-interface scanning utility built to map subnets, identify configuration flaws, and output structured platform vulnerability reports safely.</p>
+                    <h2 class="project-title">Emerging Market Risk Assessment Matrix</h2>
+                    <p class="project-desc">Conducted an extensive empirical data evaluation analyzing financial volatility, sovereign credit trajectories, and regulatory adjustments in regional markets.</p>
                     <div class="tech-stack">
-                        <span class="tech-tag">Python CLI</span>
-                        <span class="tech-tag">Network Security</span>
-                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">Econometrics</span>
+                        <span class="tech-tag">Stata</span>
+                        <span class="tech-tag">Corporate Strategy</span>
                     </div>
                 </div>
-                <a href="#" class="project-link">View Repository &rarr;</a>
+                <a href="#" class="project-link">View Case Study &rarr;</a>
             </div>
         </div>
     </main>
