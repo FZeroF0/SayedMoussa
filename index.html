@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio</title>
-    <!-- Google Fonts: Inter for ultra-clean modern text, Playfair for premium editorial headers -->
+    <title>John Doe | Economist & Advisor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -20,243 +19,52 @@
             --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Container Structure */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Slick Premium Header */
-        header {
-            border-bottom: 1px solid var(--border-color);
-            background-color: rgba(250, 250, 250, 0.8);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            font-size: 1.35rem;
-            letter-spacing: -0.5px;
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 0.3px;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        nav a:hover, nav a.active {
-            color: var(--accent);
-        }
-
-        /* Subtle animated underline on hover */
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 1.5px;
-            bottom: -6px;
-            left: 0;
-            background-color: var(--accent);
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
-        }
-
-        nav a:hover::after, nav a.active::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-
-        /* Hero Layout split */
-        .hero-section {
-            padding: 5rem 0;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        @media (min-width: 768px) {
-            .hero-section {
-                grid-template-columns: 1fr 1.2fr;
-            }
-        }
-
-        /* Profile & Subcard Presentation */
-        .profile-sticky {
-            position: sticky;
-            top: 120px;
-        }
-
-        .image-container {
-            width: 100%;
-            max-width: 360px;
-            aspect-ratio: 4/5;
-            background-color: #eaeaea;
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
-            margin-bottom: 2rem;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(15%);
-            transition: var(--transition);
-        }
-
-        .image-container:hover img {
-            filter: grayscale(0%);
-            transform: scale(1.02);
-        }
-
-        /* Hidden Inner Education Sub-Card */
-        .education-subcard {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 1.5rem;
-            max-width: 360px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.01);
-        }
-
-        .education-subcard h3 {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .edu-item {
-            border-left: 1.5px solid var(--border-color);
-            padding-left: 1rem;
-            margin-bottom: 1rem;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.7; -webkit-font-smoothing: antialiased; }
         
-        .edu-item:last-child {
-            margin-bottom: 0;
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
+        @media (min-width: 576px) { .container { padding: 0 2rem; } }
 
-        .edu-degree {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--text-main);
-        }
+        /* Navigation Header */
+        header { border-bottom: 1px solid var(--border-color); background-color: rgba(250, 250, 250, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
+        .nav-wrapper { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0.75rem; padding: 1.25rem 0; }
+        @media (min-width: 900px) { .nav-wrapper { flex-direction: row; justify-content: space-between; height: 80px; padding: 0; } }
+        
+        .logo { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.35rem; color: var(--accent); text-decoration: none; }
+        nav ul { display: flex; flex-wrap: wrap; justify-content: center; list-style: none; gap: 1.25rem; }
+        @media (min-width: 576px) { nav ul { gap: 2rem; } }
+        
+        nav a { text-decoration: none; color: var(--text-muted); font-size: 0.85rem; font-weight: 500; transition: var(--transition); position: relative; padding: 0.25rem 0; }
+        @media (min-width: 400px) { nav a { font-size: 0.9rem; } }
+        nav a:hover, nav a.active { color: var(--accent); }
+        nav a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1.5px; bottom: -2px; left: 0; background-color: var(--accent); transition: transform 0.25s ease-out; }
+        nav a:hover::after, nav a.active::after { transform: scaleX(1); }
 
-        .edu-inst {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
+        /* Hero Layout */
+        .hero-section { padding: 3rem 0; border-bottom: 1px solid var(--border-color); }
+        @media (min-width: 768px) { .hero-section { padding: 6rem 0; } }
+        
+        .hero-title { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 400; color: var(--accent); line-height: 1.2; margin-bottom: 1.5rem; }
+        @media (min-width: 768px) { .hero-title { font-size: 3.5rem; } }
+        
+        .hero-desc { color: var(--text-muted); font-size: 1.05rem; max-width: 750px; }
+        @media (min-width: 768px) { .hero-desc { font-size: 1.2rem; } }
 
-        /* Typography Content Styles */
-        .bio-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            line-height: 1.15;
-            color: var(--accent);
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-        }
-
-        .bio-text p {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-
-        .bio-text p strong {
-            color: var(--text-main);
-            font-weight: 500;
-        }
-
-        /* Action Buttons */
-        .cta-group {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2.5rem;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.75rem 1.5rem;
-            font-size: 0.88rem;
-            font-weight: 500;
-            border-radius: 4px;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .btn-primary {
-            background-color: var(--accent);
-            color: #fff;
-        }
-
-        .btn-primary:hover {
-            background-color: #333333;
-            transform: translateY(-1px);
-        }
-
-        .btn-secondary {
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-            background: transparent;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(0,0,0,0.02);
-            border-color: #adadad;
-        }
-
-        /* Responsive Breakpoint Tweak */
-        @media (max-width: 767px) {
-            .bio-content h1 { font-size: 2.2rem; }
-            .cta-group { flex-direction: column; }
-            .education-subcard, .image-container { max-width: 100%; }
-        }
+        /* Quick Navigation Portals */
+        .portal-section { padding: 3rem 0; }
+        @media (min-width: 768px) { .portal-section { padding: 5rem 0; } }
+        
+        .section-headline { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 2.5rem; }
+        
+        .portal-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+        @media (min-width: 768px) { .portal-grid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; } }
+        
+        .portal-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition); text-decoration: none; color: inherit; }
+        .portal-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.02); border-color: #adadad; }
+        
+        .portal-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; color: var(--accent); margin-bottom: 0.75rem; }
+        .portal-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
+        .portal-action { font-size: 0.9rem; font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 0.3rem; }
     </style>
 </head>
 <body>
@@ -267,8 +75,9 @@
             <nav>
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="academic-career.html">Academic Career</a></li>
+                    <li><a href="professional-career.html">Professional Career</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="career.html">Career</a></li>
                     <li><a href="resume.html">Resume</a></li>
                 </ul>
             </nav>
@@ -276,44 +85,34 @@
     </header>
 
     <main class="container">
+        <!-- Executive Brief / Bio -->
         <section class="hero-section">
-            
-            <!-- Sticky Column: Media Profile & Integrated Education Block -->
-            <div class="profile-sticky">
-                <div class="image-container">
-                    <!-- Replace with real professional asset path -->
-                    <img src="https://via.placeholder.com/400x500" alt="Professional Portrait">
-                </div>
+            <h1 class="hero-title">Bridging Quantitative Economic Theory & Real-World Policy.</h1>
+            <p class="hero-desc">John Doe is a research economist specializing in applied econometrics and strategic macroeconomic forecasting. His dual track explores foundational academic research alongside data-backed market consultation blueprints for global institutions.</p>
+        </section>
+
+        <!-- Track Portals -->
+        <section class="portal-section">
+            <h2 class="section-headline">Explore Expertise Pathways</h2>
+            <div class="portal-grid">
                 
-                <!-- Client Education cleanly nested below photo as a functional metadata component -->
-                <div class="education-subcard">
-                    <h3>Education</h3>
-                    <div class="edu-item">
-                        <div class="edu-degree">M.S. in Computer Science</div>
-                        <div class="edu-inst">Stanford University &bull; 2022</div>
+                <a href="academic-career.html" class="portal-card">
+                    <div>
+                        <h3 class="portal-name">Academic Foundations</h3>
+                        <p class="portal-desc">University fellowships, peer-reviewed data theories, pedagogical schedules, and long-form economic literature analysis.</p>
                     </div>
-                    <div class="edu-item">
-                        <div class="edu-degree">B.S. in Software Engineering</div>
-                        <div class="edu-inst">MIT &bull; 2020</div>
+                    <span class="portal-action">View Academic Timeline &rarr;</span>
+                </a>
+
+                <a href="professional-career.html" class="portal-card">
+                    <div>
+                        <h3 class="portal-name">Professional Advisory</h3>
+                        <p class="portal-desc">Corporate sector assessments, public policy initiatives, asset-risk consultations, and custom macroeconomic forecast deliverables.</p>
                     </div>
-                </div>
+                    <span class="portal-action">View Advisory Timeline &rarr;</span>
+                </a>
+
             </div>
-
-            <!-- Content Column: Main Value Proposition Narrative -->
-            <div class="bio-content">
-                <h1>Building high-performance backend infrastructure & distributed network systems.</h1>
-                <div class="bio-text">
-                    <p>I am a software engineer focused on building resilient architecture, system performance tooling, and custom infrastructure components. Currently, I lead core platform developments and optimize internal services to achieve critical low-latency metrics.</p>
-                    <p>Over the past few years, my experience has transitioned into optimizing production systems environments, container orchestration orchestration strategies, and security-hardened network automation routines. I specialize in turning complex technological scaling constraints into elegant, self-healing platforms.</p>
-                    <p>When I am not inspecting system behaviors or fine-tuning runtime variables, I enjoy exploring architectural security paradigms, customizing operational desktop workflow profiles, or mentoring emerging engineers.</p>
-                </div>
-
-                <div class="cta-group">
-                    <a href="career.html" class="btn btn-primary">View Career History</a>
-                    <a href="projects.html" class="btn btn-secondary">Explore Projects</a>
-                </div>
-            </div>
-
         </section>
     </main>
 
