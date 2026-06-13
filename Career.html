@@ -1,0 +1,77 @@
+<!-- Inside the main content section of career.html -->
+<style>
+    .timeline-container {
+        max-width: 800px;
+        margin: 4rem auto;
+        padding: 0 1rem;
+    }
+    .timeline-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
+    }
+    .timeline-entry {
+        position: relative;
+        padding-left: 2rem;
+        border-left: 2px solid var(--border-color);
+        padding-bottom: 3rem;
+    }
+    .timeline-entry:last-child {
+        border-left: 2px solid transparent;
+        padding-bottom: 0;
+    }
+    /* Simple dynamic indicator dot */
+    .timeline-entry::before {
+        content: '';
+        position: absolute;
+        left: -6px;
+        top: 6px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+    }
+    .job-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 0.5rem;
+    }
+    .job-role {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--accent);
+    }
+    .job-company {
+        font-weight: 500;
+        color: var(--text-main);
+    }
+    .job-duration {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+    }
+    .job-desc {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+    }
+</style>
+
+<div class="timeline-container">
+    <h2 class="timeline-title">Professional Experience</h2>
+    
+    <div class="timeline-entry">
+        <div class="job-meta">
+            <div class="job-role">Senior Infrastructure Engineer <span class="job-company">— Tech Corp</span></div>
+            <div class="job-duration">2024 - Present</div>
+        </div>
+        <p class="job-desc">Leading the architectural overhaul of highly distributed cloud services. Reduced application latency profiles by 18% and automated baseline health telemetry checks across primary data clusters.</p>
+    </div>
+
+    <div class="timeline-entry">
+        <div class="job-meta">
+            <div class="job-role">Systems Software Developer <span class="job-company">— Nexus Labs</span></div>
+            <div class="job-duration">2022 - 2024</div>
+        </div>
+        <p class="job-desc">Designed and deployed automated performance audit applications using structured backend pipelines. Configured isolated, containerized staging tools for testing network resilience policies.</p>
+    </div>
+</div>
