@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects & Architecture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #fafafa;
+            --card-bg: #ffffff;
+            --text-main: #2d2d2d;
+            --text-muted: #626262;
+            --accent: #1a1a1a;
+            --border-color: #e5e5e5;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+        /* Navigation Header */
+        header {
+            border-bottom: 1px solid var(--border-color);
+            background-color: rgba(250, 250, 250, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0; z-index: 100;
+        }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .logo { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.35rem; color: var(--accent); text-decoration: none; }
+        nav ul { display: flex; list-style: none; gap: 2.5rem; }
+        nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: var(--transition); position: relative; }
+        nav a:hover, nav a.active { color: var(--accent); }
+        nav a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1.5px; bottom: -6px; left: 0; background-color: var(--accent); transition: transform 0.25s ease-out; }
+        nav a:hover::after, nav a.active::after { transform: scaleX(1); }
+
+        /* Content Layout */
+        .page-section { padding: 5rem 0; }
+        .page-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 400; color: var(--accent); margin-bottom: 1rem; }
+        .page-subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 4rem; max-width: 600px; }
+
+        /* Grid System for Projects */
+        .projects-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
+        @media (min-width: 768px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+        }
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.02);
+            border-color: #adadad;
+        }
+
+        .project-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 600; color: var(--accent); margin-bottom: 1rem; }
+        .project-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
+        
+        /* Tech Stack Labels */
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+        .tech-tag { background: #f0f0f0; color: var(--text-main); font-size: 0.78rem; font-weight: 500; padding: 0.3rem 0.75rem; border-radius: 4px; }
+
+        .project-link { text-decoration: none; color: var(--accent); font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem; }
+        .project-link:hover { opacity: 0.7; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">John Doe</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-section">
+        <h1 class="page-title">Selected Projects</h1>
+        <p class="page-subtitle">A collection of custom infrastructure builds, technical platforms, and automated tools engineering engineered for stability and performance.</p>
+
+        <div class="projects-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <div>
+                    <h2 class="project-title">Automated Infrastructure Monitor</h2>
+                    <p class="project-desc">A lightweight service uptime monitor that running automated health diagnostic routines, tracking latency spikes, and generating local metrics pipelines.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Systems Automation</span>
+                        <span class="tech-tag">Network Telemetry</span>
+                    </div>
+                </div>
+                <a href="#" class="project-link">View Source Code &rarr;</a>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <div>
+                    <h2 class="project-title">Secure Network Scanner</h2>
+                    <p class="project-desc">An interactive dual-interface scanning utility built to map subnets, identify configuration flaws, and output structured platform vulnerability reports safely.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python CLI</span>
+                        <span class="tech-tag">Network Security</span>
+                        <span class="tech-tag">API Integration</span>
+                    </div>
+                </div>
+                <a href="#" class="project-link">View Repository &rarr;</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
