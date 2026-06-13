@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume & Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #fafafa;
+            --card-bg: #ffffff;
+            --text-main: #2d2d2d;
+            --text-muted: #626262;
+            --accent: #1a1a1a;
+            --border-color: #e5e5e5;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+        /* Navigation Header */
+        header { border-bottom: 1px solid var(--border-color); background-color: rgba(250, 250, 250, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .logo { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.35rem; color: var(--accent); text-decoration: none; }
+        nav ul { display: flex; list-style: none; gap: 2.5rem; }
+        nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: var(--transition); position: relative; }
+        nav a:hover, nav a.active { color: var(--accent); }
+        nav a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1.5px; bottom: -6px; left: 0; background-color: var(--accent); transition: transform 0.25s ease-out; }
+        nav a:hover::after, nav a.active::after { transform: scaleX(1); }
+
+        /* Layout Grid */
+        .page-section { padding: 5rem 0; display: grid; grid-template-columns: 1fr; gap: 4rem; }
+        @media (min-width: 768px) { .page-section { grid-template-columns: 1.2fr 1fr; } }
+
+        .page-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 400; color: var(--accent); margin-bottom: 1.5rem; }
+        .section-desc { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2rem; }
+
+        /* Action Box */
+        .resume-download-box { background: var(--card-bg); border: 1px solid var(--border-color); padding: 2rem; border-radius: 6px; margin-bottom: 3rem; }
+        .btn-download { display: inline-flex; background: var(--accent); color: #fff; text-decoration: none; padding: 0.8rem 1.8rem; border-radius: 4px; font-size: 0.9rem; font-weight: 500; transition: var(--transition); }
+        .btn-download:hover { background: #333; transform: translateY(-1px); }
+
+        /* Core Matrix Blocks */
+        .skills-section h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 600; }
+        .skill-group { margin-bottom: 1.5rem; }
+        .skill-label { font-weight: 500; font-size: 0.95rem; margin-bottom: 0.3rem; }
+        .skill-values { color: var(--text-muted); font-size: 0.9rem; }
+
+        /* Right Side Form / Link Cards */
+        .contact-card { background: var(--card-bg); border: 1px solid var(--border-color); padding: 2.5rem; border-radius: 6px; }
+        .contact-card h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 400; }
+        
+        .contact-link-item { display: flex; flex-direction: column; margin-bottom: 1.5rem; }
+        .contact-link-item:last-child { margin-bottom: 0; }
+        .contact-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); }
+        .contact-url { color: var(--accent); font-weight: 500; text-decoration: none; font-size: 1.05rem; transition: var(--transition); }
+        .contact-url:hover { color: var(--text-muted); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">John Doe</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="resume.html" class="active">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-section">
+        <!-- Left Column: Resume Metadata & Summary -->
+        <div>
+            <h1 class="page-title">Qualifications</h1>
+            <p class="section-desc">Review a summary of specialized technical capabilities and programmatic infrastructure proficiencies below, or maintain a local physical copy.</p>
+            
+            <div class="resume-download-box">
+                <!-- Points to local relative directory asset path -->
+                <a href="assets/resume.pdf" class="btn-download" download>Download Full CV (PDF)</a>
+            </div>
+
+            <div class="skills-section">
+                <h3>Core Technical Focus</h3>
+                <div class="skill-group">
+                    <div class="skill-label">Languages & Backends</div>
+                    <div class="skill-values">Python, SQL, Shell Scripting, Unix Base Architecture</div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-label">Systems & Workflows</div>
+                    <div class="skill-values">Linux Environment Optimization, Network Telemetry, Git Versioning</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Clean Communication Channels -->
+        <div>
+            <div class="contact-card">
+                <h2>Get in Touch</h2>
+                <p class="section-desc" style="font-size:0.95rem; margin-bottom: 2rem;">For collaborative projects, infrastructure inquiries, or technical consultation availability.</p>
+                
+                <div class="contact-link-item">
+                    <span class="contact-label">Email</span>
+                    <a href="mailto:client@example.com" class="contact-url">client@example.com</a>
+                </div>
+                <div class="contact-link-item">
+                    <span class="contact-label">Professional Network</span>
+                    <a href="https://linkedin.com" target="_blank" class="contact-url">linkedin.com/in/username</a>
+                </div>
+                <div class="contact-link-item">
+                    <span class="contact-label">Code Repositories</span>
+                    <a href="https://github.com" target="_blank" class="contact-url">github.com/username</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
