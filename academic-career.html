@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Career Timeline</title>
+    <title>Academic Career | Dr. Elsayed Fathi Moussa</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
@@ -25,7 +25,6 @@
         .container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
         @media (min-width: 576px) { .container { padding: 0 2rem; } }
 
-        /* Navigation Header */
         header { border-bottom: 1px solid var(--border-color); background-color: rgba(250, 250, 250, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
         .nav-wrapper { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0.75rem; padding: 1.25rem 0; }
         @media (min-width: 900px) { .nav-wrapper { flex-direction: row; justify-content: space-between; height: 80px; padding: 0; } }
@@ -38,7 +37,6 @@
         nav a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1.5px; bottom: -2px; left: 0; background-color: var(--accent); transition: transform 0.25s ease-out; }
         nav a:hover::after, nav a.active::after { transform: scaleX(1); }
 
-        /* Timeline Formatting */
         .page-section { padding: 3rem 0; }
         @media (min-width: 768px) { .page-section { padding: 5rem 0; } }
 
@@ -49,7 +47,6 @@
         @media (min-width: 768px) { .page-subtitle { font-size: 1.1rem; margin-bottom: 4rem; } }
 
         .timeline { display: flex; flex-direction: column; gap: 2rem; }
-        
         .timeline-item { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.5rem; display: grid; grid-template-columns: 1fr; gap: 1rem; }
         @media (min-width: 768px) { .timeline-item { grid-template-columns: 200px 1fr; padding: 2.5rem; gap: 2rem; } }
         
@@ -63,7 +60,7 @@
 
     <header>
         <div class="container nav-wrapper">
-            <a href="index.html" class="logo">John Doe</a>
+            <a href="index.html" class="logo">Dr. Elsayed Fathi Moussa</a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -77,27 +74,37 @@
     </header>
 
     <main class="container page-section">
-        <h1 class="page-title">Academic Appointments & Fellowships</h1>
-        <p class="page-subtitle">A record of pedagogical instruction, university commitments, departmental chairs, and economic research panel contributions.</p>
+        <h1 class="page-title">Research Fellowships & Academic Journey</h1>
+        <p class="page-subtitle">A record of doctoral contributions, international institutional stays, and rigorous scientific investigations in collaborative frameworks.</p>
 
         <div class="timeline">
-            <!-- Academic Item 1 -->
+            <!-- Appointment 1 -->
             <div class="timeline-item">
-                <div class="time-frame">2022 &mdash; Present</div>
+                <div class="time-frame">2022 &mdash; 2026</div>
                 <div class="timeline-content">
-                    <h2>Senior Professor of Econometrics</h2>
-                    <div class="institution-sub">Department of Economics, Premier University</div>
-                    <p class="timeline-desc">Leading advanced postgraduate lectures focused on dynamic time-series datasets and macroeconomic predictive forecasting equations. Serving as primary chair for structural doctoral research programs.</p>
+                    <h2>Research Fellow</h2>
+                    <div class="institution-sub">Deusto Business School, University of Deusto (Bilbao, Spain)</div>
+                    <p class="timeline-desc">Active member of the Competitiveness and Economic Development research group. Specialized in empirical modeling of public innovation, collaborative platforms, collective decision-making, and strategic administration.</p>
                 </div>
             </div>
 
-            <!-- Academic Item 2 -->
+            <!-- Appointment 2 -->
             <div class="timeline-item">
-                <div class="time-frame">2018 &mdash; 2022</div>
+                <div class="time-frame">2024 (3 Months)</div>
                 <div class="timeline-content">
-                    <h2>Research Fellow in Quantitative Policy</h2>
-                    <div class="institution-sub">Institute of Macroeconomic Analytics</div>
-                    <p class="timeline-desc">Conducted extensive peer-reviewed empirical modeling evaluating the long-range implications of fiscal strategy adjustments across regional emerging corridors.</p>
+                    <h2>International Research Stay</h2>
+                    <div class="institution-sub">School of Management, Radboud University Nijmegen (The Netherlands)</div>
+                    <p class="timeline-desc">Completed an advanced institutional research block focusing on public sector networks and co-production frameworks under the supervision of leading subject experts.</p>
+                </div>
+            </div>
+
+            <!-- Appointment 3 -->
+            <div class="timeline-item">
+                <div class="time-frame">2021 &mdash; 2025</div>
+                <div class="timeline-content">
+                    <h2>Doctoral Researcher (PhD)</h2>
+                    <div class="institution-sub">Deusto Business School, University of Deusto</div>
+                    <p class="timeline-desc">Earned an International Doctorate in Business and Territorial Competitiveness, Innovation, and Sustainability. Thesis focused on structural life cycle dynamics of collaborative governance ecosystems from initiation to multi-stakeholder continuity.</p>
                 </div>
             </div>
         </div>
