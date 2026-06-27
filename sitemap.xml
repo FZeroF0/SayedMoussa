@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Home / Gateway Hub -->
+    <url>
+        <loc>https://sayed-moussa.vercel.app/index.html</loc>
+        <lastmod>2026-06-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.00</priority>
+    </url>
+    
+    <!-- Academic Career Timeline -->
+    <url>
+        <loc>https://sayed-moussa.vercel.app/academic-career.html</loc>
+        <lastmod>2026-06-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    
+    <!-- Professional Career Portfolio -->
+    <url>
+        <loc>https://sayed-moussa.vercel.app/professional-career.html</loc>
+        <lastmod>2026-06-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    
+    <!-- Academic Production & Publications -->
+    <url>
+        <loc>https://sayed-moussa.vercel.app/projects.html</loc>
+        <lastmod>2026-06-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <!-- Executive Summary & Qualifications -->
+    <url>
+        <loc>https://sayed-moussa.vercel.app/resume.html</loc>
+        <lastmod>2026-06-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.60</priority>
+    </url>
+</urlset>
