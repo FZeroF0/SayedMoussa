@@ -3,6 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications & Projects | Dr. Elsayed Fathi Moussa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #fafafa;
+            --card-bg: #ffffff;
+            --text-main: #2d2d2d;
+            --text-muted: #626262;
+            --accent: #1a1a1a;
+            --border-color: #e5e5e5;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
+        @media (min-width: 576px) { .container { padding: 0 2rem; } }
+
+        header { border-bottom: 1px solid var(--border-color); background-color: rgba(250, 250, 250, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
+        .nav-wrapper { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0.75rem; padding: 1.25rem 0; }
+        @media (min-width: 900px) { .nav-wrapper { flex-direction: row; justify-content: space-between; height: 80px; padding: 0; } }
+        .logo { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.35rem; color: var(--accent); text-decoration: none; }
+        nav ul { display: flex; flex-wrap: wrap; justify-content: center; list-style: none; gap: 1.25rem; }
+        @media (min-width: 576px) { nav ul { gap: 2rem; } }
+        nav a { text-decoration: none; color: var(--text-muted); font-size: 0.85rem; font-weight: 500; transition: var(--transition); position: relative; padding: 0.25rem 0; }
+        @media (min-width: 400px) { nav a { font-size: 0.9rem; } }
+        nav a:hover, nav a.active { color: var(--accent); }
+        nav a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1.5px; bottom: -2px; left: 0; background-color: var(--accent); transition: transform 0.25s ease-out; }
+        nav a:hover::after, nav a.active::after { transform: scaleX(1); }
+
+        .page-section { padding: 3rem 0; }
+        @media (min-width: 768px) { .page-section { padding: 5rem 0; } }
+        .page-title { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1.2; font-weight: 400; color: var(--accent); margin-bottom: 1rem; }
+        @media (min-width: 768px) { .page-title { font-size: 2.8rem; } }
+        .page-subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 2.5rem; max-width: 600px; }
+        @media (min-width: 768px) { .page-subtitle { font-size: 1.1rem; margin-bottom: 4rem; } }
+
+        .projects-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+        @media (min-width: 768px) { .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; } }
+
+        .project-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition); }
+        @media (min-width: 576px) { .project-card { padding: 2.5rem; } }
+        .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.02); border-color: #adadad; }
+
+        .project-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 600; color: var(--accent); margin-bottom: 1rem; }
+        .project-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+        .tech-tag { background: #f0f0f0; color: var(--text-main); font-size: 0.78rem; font-weight: 500; padding: 0.3rem 0.75rem; border-radius: 4px; }
+        .project-link { text-decoration: none; color: var(--accent); font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.5rem 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">Dr. Elsayed Fathi Moussa</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academic-career.html">Academic Career</a></li>
+                    <li><a href="professional-career.html">Professional Career</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-section">
+        <h1 class="page-title">Academic Production & Initiatives</h1>
+        <p class="page-subtitle">Selected peer-reviewed articles, ongoing legislative analyses, and global forum moderation frameworks.</p>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div>
+                    <h2 class="project-title">Collaborative Governance in the Public Sector: Trends and Dynamics</h2>
+                    <p class="project-desc">A deep empirical literature study detailing evolving structural paradigms and global operational pathways within state frameworks.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">IJBE Journal</span>
+                        <span class="tech-tag">Systematic Review</span>
+                    </div>
+                </div>
+                <a href="https://doi.org/10.1504/IJBE.2025.10072097" target="_blank" class="project-link">View Publication &rarr;</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div>
+                    <h2 class="project-title">The Dynamics of Collaborative Governance: A Life Cycle Perspective</h2>
+                    <p class="project-desc">Published work mapping long-range configurations from initial operational framework launch blocks to sustainable practices.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">IJPSM Journal</span>
+                        <span class="tech-tag">Life Cycle Modeling</span>
+                    </div>
+                </div>
+                <a href="https://doi.org/10.1108/IJPSM-01-2025-0037" target="_blank" class="project-link">View Publication &rarr;</a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div>
+                    <h2 class="project-title">Bottom-up Agenda Setting: Citizen Legislative Initiatives</h2>
+                    <p class="project-desc">A comprehensive policy study parsing citizen-led legislative frameworks specifically within the Basque Country regional ecosystem.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">IRAS Review</span>
+                        <span class="tech-tag">Policy Agenda</span>
+                    </div>
+                </div>
+                <span class="project-link" style="color:var(--text-muted);">Under Review</span>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div>
+                    <h2 class="project-title">Building Collaboration Before It Starts</h2>
+                    <p class="project-desc">Methodological investigation using thematic analysis and Fuzzy-set Qualitative Comparative Analysis (fsQCA).</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Work In Progress</span>
+                        <span class="tech-tag">fsQCA Modeling</span>
+                    </div>
+                </div>
+                <span class="project-link" style="color:var(--text-muted);">In Progress</span>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects & Economic Insights</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
