@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume & Contact</title>
+    <title>Curriculum Vitae | Dr. Elsayed Fathi Moussa</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
@@ -21,32 +21,12 @@
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.7; -webkit-font-smoothing: antialiased; }
-        
-        .container { 
-            max-width: 1100px; 
-            margin: 0 auto; 
-            padding: 0 1.25rem; 
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
         @media (min-width: 576px) { .container { padding: 0 2rem; } }
 
-        /* Navigation Header - Fully Unified 5-Item Responsive Menu */
         header { border-bottom: 1px solid var(--border-color); background-color: rgba(250, 250, 250, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
-        .nav-wrapper { 
-            display: flex; 
-            flex-direction: column;
-            justify-content: center; 
-            align-items: center; 
-            gap: 0.75rem;
-            padding: 1.25rem 0;
-        }
-        @media (min-width: 900px) {
-            .nav-wrapper {
-                flex-direction: row;
-                justify-content: space-between;
-                height: 80px;
-                padding: 0;
-            }
-        }
+        .nav-wrapper { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0.75rem; padding: 1.25rem 0; }
+        @media (min-width: 900px) { .nav-wrapper { flex-direction: row; justify-content: space-between; height: 80px; padding: 0; } }
         .logo { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.35rem; color: var(--accent); text-decoration: none; }
         nav ul { display: flex; flex-wrap: wrap; justify-content: center; list-style: none; gap: 1.25rem; }
         @media (min-width: 576px) { nav ul { gap: 2rem; } }
@@ -54,94 +34,31 @@
         @media (min-width: 400px) { nav a { font-size: 0.9rem; } }
         nav a:hover, nav a.active { color: var(--accent); }
         nav a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1.5px; bottom: -2px; left: 0; background-color: var(--accent); transition: transform 0.25s ease-out; }
-        nav a:hover::after, nav a.active::after { transform: scaleX(1); }
 
-        /* Layout Columns */
-        .page-section { 
-            padding: 3rem 0; 
-            display: grid; 
-            grid-template-columns: 1fr; 
-            gap: 3rem; 
-        }
-        @media (min-width: 768px) { 
-            .page-section { 
-                grid-template-columns: 1.2fr 1fr; 
-                gap: 4rem; 
-                padding: 5rem 0;
-            } 
-        }
+        .page-section { padding: 3rem 0; display: grid; grid-template-columns: 1fr; gap: 3rem; }
+        @media (min-width: 768px) { .page-section { grid-template-columns: 1.2fr 1fr; gap: 4rem; padding: 5rem 0; } }
 
-        .page-title { 
-            font-family: 'Playfair Display', serif; 
-            font-size: 2rem; 
-            font-weight: 400; 
-            color: var(--accent); 
-            margin-bottom: 1.5rem; 
-            line-height: 1.2;
-        }
+        .page-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 400; color: var(--accent); margin-bottom: 1.5rem; line-height: 1.2; }
         @media (min-width: 768px) { .page-title { font-size: 2.8rem; } }
-        
         .section-desc { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2rem; }
 
-        /* Action/Download Box */
-        .resume-download-box { 
-            background: var(--card-bg); 
-            border: 1px solid var(--border-color); 
-            padding: 1.5rem; 
-            border-radius: 6px; 
-            margin-bottom: 3rem; 
-            text-align: center;
-        }
-        @media (min-width: 576px) {
-            .resume-download-box { padding: 2rem; text-align: left; }
-        }
-        .btn-download { 
-            display: inline-flex; 
-            justify-content: center;
-            background: var(--accent); 
-            color: #fff; 
-            text-decoration: none; 
-            padding: 0.8rem 1.8rem; 
-            border-radius: 4px; 
-            font-size: 0.9rem; 
-            font-weight: 500; 
-            transition: var(--transition); 
-            width: 100%; 
-            box-sizing: border-box;
-        }
+        .resume-download-box { background: var(--card-bg); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 6px; margin-bottom: 3rem; text-align: center; }
+        @media (min-width: 576px) { .resume-download-box { padding: 2rem; text-align: left; } }
+        .btn-download { display: inline-flex; justify-content: center; background: var(--accent); color: #fff; text-decoration: none; padding: 0.8rem 1.8rem; border-radius: 4px; font-size: 0.9rem; font-weight: 500; transition: var(--transition); width: 100%; }
         @media (min-width: 400px) { .btn-download { width: auto; } }
         .btn-download:hover { background: #333; transform: translateY(-1px); }
 
-        /* Skills Layout */
         .skills-section h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 600; }
         .skill-group { margin-bottom: 1.5rem; }
         .skill-label { font-weight: 500; font-size: 0.95rem; margin-bottom: 0.3rem; }
         .skill-values { color: var(--text-muted); font-size: 0.9rem; }
 
-        /* Right Side Contact Box */
-        .contact-card { 
-            background: var(--card-bg); 
-            border: 1px solid var(--border-color); 
-            padding: 1.5rem; 
-            border-radius: 6px; 
-        }
+        .contact-card { background: var(--card-bg); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 6px; }
         @media (min-width: 576px) { .contact-card { padding: 2.5rem; } }
-        
         .contact-card h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 1.5rem; font-weight: 400; }
-        @media (min-width: 576px) { .contact-card h2 { font-size: 1.8rem; } }
-        
         .contact-link-item { display: flex; flex-direction: column; margin-bottom: 1.5rem; }
-        .contact-link-item:last-child { margin-bottom: 0; }
         .contact-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); }
-        .contact-url { 
-            color: var(--accent); 
-            font-weight: 500; 
-            text-decoration: none; 
-            font-size: 0.95rem; 
-            transition: var(--transition); 
-            word-break: break-all; 
-        }
-        @media (min-width: 400px) { .contact-url { font-size: 1.05rem; } }
+        .contact-url { color: var(--accent); font-weight: 500; text-decoration: none; font-size: 0.95rem; transition: var(--transition); word-break: break-all; }
         .contact-url:hover { color: var(--text-muted); }
     </style>
 </head>
@@ -149,7 +66,7 @@
 
     <header>
         <div class="container nav-wrapper">
-            <a href="index.html" class="logo">John Doe</a>
+            <a href="index.html" class="logo">Dr. Elsayed Fathi Moussa</a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -164,46 +81,46 @@
 
     <main class="container page-section">
         <div>
-            <h1 class="page-title">Professional Executive Summary</h1>
-            <p class="section-desc">Review an overview of quantitative core expertises and strategic framework methodologies below, or access a comprehensive copy.</p>
+            <h1 class="page-title">Executive Core Qualifications</h1>
+            <p class="section-desc">A brief structural overview of analytical fields, specialized software suites, and international accolades.</p>
             
             <div class="resume-download-box">
-                <a href="assets/resume.pdf" class="btn-download" download>Download Comprehensive CV (PDF)</a>
+                <a href="assets/cv.pdf" class="btn-download" download>Download Comprehensive CV (PDF)</a>
             </div>
 
             <div class="skills-section">
-                <h3>Core Disciplines & Methodologies</h3>
+                <h3>Expertise Areas & Competencies</h3>
                 <div class="skill-group">
-                    <div class="skill-label">Quantitative Frameworks</div>
-                    <div class="skill-values">Applied Econometrics, Time-Series Forecasting, Statistical Predictive Modeling</div>
+                    <div class="skill-label">Fields of Interest</div>
+                    <div class="skill-values">Collaborative Governance, Strategic Management, Public Innovation, Change Architecture, Senior Leadership</div>
                 </div>
                 <div class="skill-group">
-                    <div class="skill-label">Domain Expertise</div>
-                    <div class="skill-values">Macroeconomic Trend Assessment, Emerging Market Vulnerabilities, Competitive Structure Analysis</div>
+                    <div class="skill-label">Methodological Software</div>
+                    <div class="skill-values">VOSviewer, ATLAS.ti (Qualitative & Bibliometric analysis tools)</div>
                 </div>
                 <div class="skill-group">
-                    <div class="skill-label">Analytical Systems</div>
-                    <div class="skill-values">Stata, R Studio, MATLAB, Excel Macro Modeling</div>
+                    <div class="skill-label">Languages</div>
+                    <div class="skill-values">Arabic (Native), English (Proficient), French (Intermediate), Spanish (B1 Level)</div>
                 </div>
             </div>
         </div>
 
         <div>
             <div class="contact-card">
-                <h2>Inquiries & Advisory</h2>
-                <p class="section-desc" style="font-size:0.95rem; margin-bottom: 2rem;">For strategic consultations, corporate market assessments, or speaker engagement inquiries.</p>
+                <h2>Institutional Contact</h2>
+                <p class="section-desc" style="font-size:0.95rem; margin-bottom: 2rem;">Based in Bilbao, Bizkaia, Spain. Available for panels, strategic policy reviews, and collaborative research initiatives.</p>
                 
                 <div class="contact-link-item">
-                    <span class="contact-label">Corporate Email</span>
-                    <a href="mailto:economist@example.com" class="contact-url">economist@example.com</a>
+                    <span class="contact-label">Academic Mail</span>
+                    <a href="mailto:e.mohamed@opendeusto.es" class="contact-url">e.mohamed@opendeusto.es</a>
                 </div>
                 <div class="contact-link-item">
-                    <span class="contact-label">Professional Network</span>
-                    <a href="https://linkedin.com" target="_blank" class="contact-url">linkedin.com/in/username</a>
+                    <span class="contact-label">Contact Number</span>
+                    <span class="contact-url" style="cursor:default; hover:none;">(+34) 645245557</span>
                 </div>
                 <div class="contact-link-item">
-                    <span class="contact-label">Research Citations / Repository</span>
-                    <a href="https://ssrn.com" target="_blank" class="contact-url">ssrn.com/author=id</a>
+                    <span class="contact-label">Affiliated Institution</span>
+                    <a href="https://www.deusto.es" target="_blank" class="contact-url">Deusto Business School, Spain</a>
                 </div>
             </div>
         </div>
