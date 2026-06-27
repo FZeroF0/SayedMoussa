@@ -1,0 +1,6 @@
+# Allow all major search engines to crawl and index Dr. Moussa's public profile
+User-agent: *
+Allow: /
+
+# Direct search bots to the absolute sitemap path on Vercel
+Sitemap: https://sayed-moussa.vercel.app/sitemap.xml
