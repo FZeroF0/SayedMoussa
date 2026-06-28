@@ -3,32 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Titles and Explicit Variations -->
     <title>Dr. Elsayed Moussa | Public Policy & Governance Specialist</title>
     <meta name="description" content="Official academic and professional portal of Dr. Elsayed Moussa (Sayed Moussa). Explore research on collaborative governance and administrative leadership by Elsayed Moussa.">
     <meta name="keywords" content="Dr. Elsayed Moussa, Sayed Moussa, Elsayed Moussa, Collaborative Governance, Deusto Business School, Public Administration Egypt">
     <meta name="author" content="Dr. Elsayed Moussa">
 
-    <!-- Open Graph Protocol for Socials / LinkedIn Sharing -->
     <meta property="og:title" content="Dr. Elsayed Moussa | Public Policy & Governance">
     <meta property="og:description" content="Professional track and academic publications of Sayed Moussa (Dr. Elsayed Moussa).">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://sayed-moussa.vercel.app/">
 
-    <!-- Typography Assets -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg-color: #fafafa;
+            --bg-color: #fcfbf9;
             --card-bg: #ffffff;
-            --text-main: #2d2d2d;
-            --text-muted: #626262;
-            --accent: #1a1a1a;
-            --border-color: #e5e5e5;
+            --text-main: #1e293b;
+            --text-muted: #475569;
+            --accent: #0f172a;
+            --accent-light: #334155;
+            --border-color: #e2e8f0;
             --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -38,11 +35,11 @@
         .container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
         @media (min-width: 576px) { .container { padding: 0 2rem; } }
 
-        header { border-bottom: 1px solid var(--border-color); background-color: rgba(250, 250, 250, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
+        header { border-bottom: 1px solid var(--border-color); background-color: rgba(252, 251, 249, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
         .nav-wrapper { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0.75rem; padding: 1.25rem 0; }
         @media (min-width: 900px) { .nav-wrapper { flex-direction: row; justify-content: space-between; height: 80px; padding: 0; } }
         
-        .logo { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.35rem; color: var(--accent); text-decoration: none; }
+        .logo { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.35rem; color: var(--accent); text-decoration: none; letter-spacing: -0.3px; }
         nav ul { display: flex; flex-wrap: wrap; justify-content: center; list-style: none; gap: 1.25rem; }
         @media (min-width: 576px) { nav ul { gap: 2rem; } }
         
@@ -52,36 +49,54 @@
         nav a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1.5px; bottom: -2px; left: 0; background-color: var(--accent); transition: transform 0.25s ease-out; }
         nav a:hover::after, nav a.active::after { transform: scaleX(1); }
 
-        .hero-section { padding: 3rem 0; border-bottom: 1px solid var(--border-color); }
-        @media (min-width: 768px) { .hero-section { padding: 6rem 0; } }
+        .profile-container { display: grid; grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 0; border-bottom: 1px solid var(--border-color); align-items: center; }
+        @media (min-width: 768px) { .profile-container { grid-template-columns: 280px 1fr; padding: 5rem 0; gap: 3.5rem; } }
         
-        .hero-title { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 400; color: var(--accent); line-height: 1.2; margin-bottom: 1.5rem; }
-        @media (min-width: 768px) { .hero-title { font-size: 3.2rem; } }
+        .profile-photo-wrapper { width: 100%; max-width: 280px; aspect-ratio: 1 / 1; background: #e2e8f0; border-radius: 8px; border: 1px solid var(--border-color); overflow: hidden; display: flex; align-items: center; justify-content: center; position: relative; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04); }
+        .profile-photo-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+        .photo-placeholder-text { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 500; }
+
+        .hero-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; color: var(--accent); line-height: 1.25; margin-bottom: 1.5rem; letter-spacing: -0.5px; }
+        @media (min-width: 768px) { .hero-title { font-size: 2.8rem; } }
         
-        .hero-desc { color: var(--text-muted); font-size: 1.05rem; max-width: 800px; }
-        @media (min-width: 768px) { .hero-desc { font-size: 1.15rem; } }
+        .hero-desc { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 1.25rem; }
+        @media (min-width: 768px) { .hero-desc { font-size: 1.1rem; } }
+
+        .education-brief { margin-top: 2rem; display: grid; grid-template-columns: 1fr; gap: 1rem; background: rgba(15, 23, 42, 0.02); padding: 1.5rem; border-radius: 6px; border-left: 3px solid var(--accent-light); }
+        @media (min-width: 600px) { .education-brief { grid-template-columns: repeat(2, 1fr); } }
+        .edu-brief-item h4 { font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+        .edu-brief-item p { font-size: 0.85rem; color: var(--text-muted); }
 
         .portal-section { padding: 3rem 0; }
-        @media (min-width: 768px) { .portal-section { padding: 5rem 0; } }
-        
-        .section-headline { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 2.5rem; }
+        @media (min-width: 768px) { .portal-section { padding: 4rem 0; } }
+        .section-headline { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 500; margin-bottom: 2.5rem; color: var(--accent); }
         
         .portal-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
         @media (min-width: 768px) { .portal-grid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; } }
         
-        .portal-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition); text-decoration: none; color: inherit; }
-        .portal-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.02); border-color: #adadad; }
+        .portal-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition); text-decoration: none; color: inherit; box-shadow: 0 2px 12px rgba(15, 23, 42, 0.01); }
+        .portal-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(15,23,42,0.06); border-color: var(--accent-light); }
         
-        .portal-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; color: var(--accent); margin-bottom: 0.75rem; }
+        .portal-name { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 600; color: var(--accent); margin-bottom: 0.75rem; }
         .portal-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
-        .portal-action { font-size: 0.9rem; font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 0.3rem; }
+        .portal-action { font-size: 0.9rem; font-weight: 600; color: var(--accent-light); display: inline-flex; align-items: center; gap: 0.3rem; }
+
+        footer { background: var(--accent); color: #f8fafc; padding: 3rem 0; margin-top: 4rem; border-top: 1px solid var(--border-color); }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; font-size: 0.9rem; }
+        @media (min-width: 768px) { .footer-grid { grid-template-columns: 1.5fr repeat(3, 1fr); } }
+        .footer-brand h4 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .footer-brand p { color: #94a3b8; font-size: 0.85rem; }
+        .footer-col h5 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; margin-bottom: 1rem; font-weight: 600; }
+        .footer-col p, .footer-col a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; display: block; word-break: break-all; }
+        .footer-col a:hover { color: #ffffff; }
+        .footer-bottom { text-align: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #334155; color: #64748b; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
     <header>
         <div class="container nav-wrapper">
-            <a href="index.html" class="logo">Dr. Elsayed Fathi Moussa</a>
+            <a href="index.html" class="logo">Dr. Elsayed Moussa</a>
             <nav>
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
@@ -95,9 +110,31 @@
     </header>
 
     <main class="container">
-        <section class="hero-section">
-            <h1 class="hero-title">Intersecting Rigorous Governance Research with Global Policy Leadership.</h1>
-            <p class="hero-desc">Dr. Elsayed Fathi Moussa is an international Research Fellow holding an International Doctorate in Business and Territorial Competitiveness. Bridging nearly 15 years of senior experience in public administration and diplomatic attachments with deep academic study, his focus lies in collaborative governance, public innovation, and strategic leadership.</p>
+        <section class="profile-container">
+            <!-- Space for Professional Photo -->
+            <div class="profile-photo-wrapper">
+                <!-- Replace 'profile.jpg' with actual image path when ready -->
+                <img src="assets/profile.jpg" alt="Dr. Elsayed Moussa" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="photo-placeholder-text" style="display:none;">Photo Space</div>
+            </div>
+
+            <div>
+                <h1 class="hero-title">Intersecting Rigorous Governance Research with Strategic Public Leadership.</h1>
+                <p class="hero-desc">Welcome. I am an international Research Fellow specialized in administrative modernization, collective choice architecture, and institutional performance tracking. Known across professional networks as <strong>Sayed Moussa</strong>, my trajectory bridges nearly 15 years of state-level leadership with rigorous scientific inquiry.</p>
+                <p class="hero-desc">My work focuses on mapping the long-term life cycles of collaborative governance models—transforming theoretical cross-sector coordination into sustainable, high-performing organizational reality.</p>
+                
+                <!-- Quick Compact Education Section -->
+                <div class="education-brief">
+                    <div class="edu-brief-item">
+                        <h4>International PhD</h4>
+                        <p>Business & Territorial Competitiveness<br>Deusto Business School, Spain</p>
+                    </div>
+                    <div class="edu-brief-item">
+                        <h4>Research Fellowship</h4>
+                        <p>Public Network Architecture Structures<br>Radboud University, Netherlands</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="portal-section">
@@ -107,7 +144,7 @@
                 <a href="academic-career.html" class="portal-card">
                     <div>
                         <h3 class="portal-name">Academic Foundations</h3>
-                        <p class="portal-desc">Doctoral investigations at Deusto Business School, international research stays, peer-reviewed publications, and structural theories on governance lifecycles.</p>
+                        <p class="portal-desc">Doctoral investigations at Deusto Business School, international research blocks, peer-reviewed publications, and structural lifecycle modeling.</p>
                     </div>
                     <span class="portal-action">View Academic Timeline &rarr;</span>
                 </a>
@@ -115,7 +152,7 @@
                 <a href="professional-career.html" class="portal-card">
                     <div>
                         <h3 class="portal-name">Professional Career</h3>
-                        <p class="portal-desc">Senior institutional strategies, diplomatic appointments with the Ministry of Higher Education and UNESCO, and executive leadership pipelines.</p>
+                        <p class="portal-desc">Senior institutional leadership records, intergovernmental strategy management with UNESCO, and high-level structural public policy development.</p>
                     </div>
                     <span class="portal-action">View Public Policy Portfolio &rarr;</span>
                 </a>
@@ -123,6 +160,30 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h4>Dr. Elsayed Moussa</h4>
+                <p>Public Policy & Governance Architecture</p>
+            </div>
+            <div class="footer-col">
+                <h5>Academic Inquiries</h5>
+                <a href="mailto:e.mohamed@opendeusto.es">e.mohamed@opendeusto.es</a>
+            </div>
+            <div class="footer-col">
+                <h5>Direct Contact</h5>
+                <p>(+34) 645245557</p>
+            </div>
+            <div class="footer-col">
+                <h5>Primary Institution</h5>
+                <a href="https://www.deusto.es" target="_blank">Deusto Business School, Spain</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Dr. Elsayed Moussa. All Rights Reserved. Fully deployed via Vercel.
+        </div>
+    </footer>
 
 </body>
 </html>
