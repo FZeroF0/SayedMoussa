@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Professional / Diplomatic Specific SEO Block -->
     <title>Professional Career & Diplomacy | Dr. Elsayed Moussa</title>
     <meta name="description" content="Explore the public administration trajectory and international diplomatic appointments held by Elsayed Moussa (Sayed Moussa).">
     <meta name="keywords" content="Dr. Elsayed Moussa, Sayed Moussa, Elsayed Moussa, Diplomacy, Public Administration, UNESCO, Egypt Ministry of Higher Education">
@@ -18,64 +13,68 @@
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://sayed-moussa.vercel.app/professional-career">
 
-    <!-- Typography Assets -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg-color: #fafafa;
+            --bg-color: #fcfbf9;
             --card-bg: #ffffff;
-            --text-main: #2d2d2d;
-            --text-muted: #626262;
-            --accent: #1a1a1a;
-            --border-color: #e5e5e5;
+            --text-main: #1e293b;
+            --text-muted: #475569;
+            --accent: #0f172a;
+            --accent-light: #334155;
+            --border-color: #e2e8f0;
             --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.7; -webkit-font-smoothing: antialiased; }
-        
         .container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
         @media (min-width: 576px) { .container { padding: 0 2rem; } }
 
-        header { border-bottom: 1px solid var(--border-color); background-color: rgba(250, 250, 250, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
+        header { border-bottom: 1px solid var(--border-color); background-color: rgba(252, 251, 249, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
         .nav-wrapper { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0.75rem; padding: 1.25rem 0; }
         @media (min-width: 900px) { .nav-wrapper { flex-direction: row; justify-content: space-between; height: 80px; padding: 0; } }
-        
         .logo { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.35rem; color: var(--accent); text-decoration: none; }
         nav ul { display: flex; flex-wrap: wrap; justify-content: center; list-style: none; gap: 1.25rem; }
         @media (min-width: 576px) { nav ul { gap: 2rem; } }
         nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: var(--transition); position: relative; padding: 0.25rem 0; }
         nav a:hover, nav a.active { color: var(--accent); }
         nav a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1.5px; bottom: -2px; left: 0; background-color: var(--accent); transition: transform 0.25s ease-out; }
-        nav a:hover::after, nav a.active::after { transform: scaleX(1); }
 
         .page-section { padding: 3rem 0; }
         @media (min-width: 768px) { .page-section { padding: 5rem 0; } }
-
-        .page-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 400; color: var(--accent); margin-bottom: 1rem; line-height: 1.2; }
+        .page-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; color: var(--accent); margin-bottom: 1rem; line-height: 1.2; }
         @media (min-width: 768px) { .page-title { font-size: 2.8rem; } }
-        
         .page-subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 3rem; max-width: 600px; }
         @media (min-width: 768px) { .page-subtitle { font-size: 1.1rem; margin-bottom: 4rem; } }
 
         .timeline { display: flex; flex-direction: column; gap: 2rem; }
-        .timeline-item { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.5rem; display: grid; grid-template-columns: 1fr; gap: 1rem; }
+        .timeline-item { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.5rem; display: grid; grid-template-columns: 1fr; gap: 1rem; box-shadow: 0 2px 12px rgba(15, 23, 42, 0.01); }
         @media (min-width: 768px) { .timeline-item { grid-template-columns: 200px 1fr; padding: 2.5rem; gap: 2rem; } }
-        
-        .time-frame { font-weight: 600; font-size: 0.95rem; color: var(--accent); }
+        .time-frame { font-weight: 600; font-size: 0.95rem; color: var(--accent-light); }
         .timeline-content h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--accent); }
         .institution-sub { font-weight: 500; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; }
         .timeline-desc { color: var(--text-muted); font-size: 0.95rem; }
+
+        footer { background: var(--accent); color: #f8fafc; padding: 3rem 0; margin-top: 4rem; border-top: 1px solid var(--border-color); }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; font-size: 0.9rem; }
+        @media (min-width: 768px) { .footer-grid { grid-template-columns: 1.5fr repeat(3, 1fr); } }
+        .footer-brand h4 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .footer-brand p { color: #94a3b8; font-size: 0.85rem; }
+        .footer-col h5 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; margin-bottom: 1rem; font-weight: 600; }
+        .footer-col p, .footer-col a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; display: block; word-break: break-all; }
+        .footer-col a:hover { color: #ffffff; }
+        .footer-bottom { text-align: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #334155; color: #64748b; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
     <header>
         <div class="container nav-wrapper">
-            <a href="index.html" class="logo">Dr. Elsayed Fathi Moussa</a>
+            <a href="index.html" class="logo">Dr. Elsayed Moussa</a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -90,40 +89,61 @@
 
     <main class="container page-section">
         <h1 class="page-title">Public Administration & Diplomatic History</h1>
-        <p class="page-subtitle">Synthesizing 15 years of state-level leadership, multilateral intergovernmental networks, and structural strategy development.</p>
+        <p class="page-subtitle">Synthesizing 15 years of state-level strategy alignment, regional structural blueprints, and cross-border partnerships.</p>
 
         <div class="timeline">
-            <!-- Job 1 -->
             <div class="timeline-item">
                 <div class="time-frame">2021 (Apr &mdash; Dec)</div>
                 <div class="timeline-content">
                     <h2>Assistant Secretary-General</h2>
                     <div class="institution-sub">Egyptian National Commission for UNESCO, ALECSO, & ICESCO</div>
-                    <p class="timeline-desc">Directed multi-sector operations, oversaw budgetary allocation blueprints ($250,000 annual funding streams), and coordinated national infrastructure briefs for global general assemblies alongside executive state ministries.</p>
+                    <p class="timeline-desc">Directed operational pathways, optimized budgetary resource blueprints ($250,000 localized deployment funds), and managed structural interministerial brief updates across multiple intergovernmental assemblies.</p>
                 </div>
             </div>
 
-            <!-- Job 2 -->
             <div class="timeline-item">
                 <div class="time-frame">2020 &mdash; 2021</div>
                 <div class="timeline-content">
                     <h2>Diplomat (Attaché)</h2>
                     <div class="institution-sub">Egyptian Cultural Bureau, Embassy of Egypt (Madrid, Spain)</div>
-                    <p class="timeline-desc">Supervised core financial strategies and educational program allocations for sponsored scholars within European institutions while strengthening international bilateral links.</p>
+                    <p class="timeline-desc">Supervised structural fund tracking, academic sponsorship systems, and targeted continental networking frameworks across European research nodes.</p>
                 </div>
             </div>
 
-            <!-- Job 3 -->
             <div class="timeline-item">
                 <div class="time-frame">2017 &mdash; 2020</div>
                 <div class="timeline-content">
                     <h2>Senior Specialist Tracks</h2>
                     <div class="institution-sub">Ministry of Higher Education / National Commissions</div>
-                    <p class="timeline-desc">Drafted multinational executive memorandums of understanding (MoUs) and structured legislative policy blueprints across international educational development committees.</p>
+                    <p class="timeline-desc">Drafted multinational executive memorandums of understanding (MoUs) and organized policy design modules within global developmental strategy blocks.</p>
                 </div>
             </div>
         </div>
     </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h4>Dr. Elsayed Moussa</h4>
+                <p>Public Policy & Governance Architecture</p>
+            </div>
+            <div class="footer-col">
+                <h5>Academic Inquiries</h5>
+                <a href="mailto:e.mohamed@opendeusto.es">e.mohamed@opendeusto.es</a>
+            </div>
+            <div class="footer-col">
+                <h5>Direct Contact</h5>
+                <p>(+34) 645245557</p>
+            </div>
+            <div class="footer-col">
+                <h5>Primary Institution</h5>
+                <a href="https://www.deusto.es" target="_blank">Deusto Business School, Spain</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Dr. Elsayed Moussa. All Rights Reserved. Fully deployed via Vercel.
+        </div>
+    </footer>
 
 </body>
 </html>
