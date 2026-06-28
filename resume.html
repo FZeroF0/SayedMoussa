@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Vitae | Dr. Elsayed Moussa</title>
-    <meta name="description" content="Access the comprehensive professional resume, executive skills matrix, and institutional credentials of Dr. Elsayed Moussa (Sayed Moussa).">
-    <meta name="keywords" content="Dr. Elsayed Moussa, Sayed Moussa, Elsayed Moussa, Resume, Curriculum Vitae, Contact, Skills">
+    <meta name="description" content="Academic credentials, formal acknowledgements, and institutional references for Dr. Elsayed Moussa.">
+    <meta name="keywords" content="Dr. Elsayed Moussa, Sayed Moussa, Education, PhD Deusto, Master Delaware, Acknowledgements, References">
     <meta name="author" content="Dr. Elsayed Moussa">
 
     <meta property="og:title" content="Curriculum Vitae | Dr. Elsayed Moussa">
-    <meta property="og:description" content="Download the comprehensive overview of structural qualifications for Sayed Moussa (Dr. Elsayed Moussa).">
+    <meta property="og:description" content="Academic credentials, formal acknowledgements, and institutional references.">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://sayed-moussa.vercel.app/resume">
 
@@ -43,31 +43,37 @@
         nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: var(--transition); position: relative; padding: 0.25rem 0; }
         nav a:hover, nav a.active { color: var(--accent); }
 
-        .page-section { padding: 3rem 0; display: grid; grid-template-columns: 1fr; gap: 3rem; }
-        @media (min-width: 768px) { .page-section { grid-template-columns: 1.2fr 1fr; gap: 4rem; padding: 5rem 0; } }
-
-        .page-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; color: var(--accent); margin-bottom: 1.5rem; line-height: 1.2; }
+        .page-section { padding: 3rem 0; }
+        @media (min-width: 768px) { .page-section { padding: 5rem 0; } }
+        .page-title { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1.2; font-weight: 500; color: var(--accent); margin-bottom: 1rem; }
         @media (min-width: 768px) { .page-title { font-size: 2.8rem; } }
-        .section-desc { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2rem; }
+        .page-subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 3rem; max-width: 700px; }
+        @media (min-width: 768px) { .page-subtitle { font-size: 1.1rem; margin-bottom: 4rem; } }
 
-        .resume-download-box { background: var(--card-bg); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 6px; margin-bottom: 3rem; text-align: center; box-shadow: 0 2px 12px rgba(15, 23, 42, 0.01); }
-        @media (min-width: 576px) { .resume-download-box { padding: 2rem; text-align: left; } }
-        .btn-download { display: inline-flex; justify-content: center; background: var(--accent); color: #fff; text-decoration: none; padding: 0.8rem 1.8rem; border-radius: 4px; font-size: 0.9rem; font-weight: 500; transition: var(--transition); width: 100%; }
-        @media (min-width: 400px) { .btn-download { width: auto; } }
-        .btn-download:hover { background: var(--accent-light); transform: translateY(-1px); }
+        .section-breakdown { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--accent); margin: 4rem 0 1.5rem 0; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; }
+        
+        /* Education Layout Styles */
+        .education-list { display: flex; flex-direction: column; gap: 2rem; }
+        .education-item { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 2rem; transition: var(--transition); box-shadow: 0 2px 12px rgba(15, 23, 42, 0.01); }
+        .education-item:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(15,23,42,0.04); border-color: var(--accent-light); }
+        .edu-meta { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; margin-bottom: 0.75rem; gap: 0.5rem; }
+        .edu-degree { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 600; color: var(--accent); line-height: 1.4; }
+        .edu-date { background: #e2e8f0; color: var(--accent); font-size: 0.8rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 4px; white-space: nowrap; }
+        .edu-institution { font-size: 1rem; font-weight: 500; color: var(--accent-light); margin-bottom: 0.75rem; }
+        .edu-details { color: var(--text-muted); font-size: 0.95rem; padding-left: 1.25rem; border-left: 2px solid var(--border-color); }
 
-        .skills-section h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 600; }
-        .skill-group { margin-bottom: 1.5rem; }
-        .skill-label { font-weight: 500; font-size: 0.95rem; margin-bottom: 0.3rem; color: var(--accent); }
-        .skill-values { color: var(--text-muted); font-size: 0.9rem; }
-
-        .contact-card { background: var(--card-bg); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 6px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02); }
-        @media (min-width: 576px) { .contact-card { padding: 2.5rem; } }
-        .contact-card h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 1.5rem; font-weight: 500; color: var(--accent); }
-        .contact-link-item { display: flex; flex-direction: column; margin-bottom: 1.5rem; }
-        .contact-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); }
-        .contact-url { color: var(--accent-light); font-weight: 500; text-decoration: none; font-size: 0.95rem; transition: var(--transition); word-break: break-all; }
-        .contact-url:hover { color: var(--accent); }
+        /* Grid Framework for Cards */
+        .resume-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+        @media (min-width: 768px) { .resume-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; } }
+        .resume-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition); box-shadow: 0 2px 12px rgba(15, 23, 42, 0.01); }
+        .resume-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(15,23,42,0.06); border-color: var(--accent-light); }
+        
+        .card-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: var(--accent); margin-bottom: 0.5rem; line-height: 1.4; }
+        .card-desc { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
+        .card-footer { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .card-tag { background: #f1f5f9; color: var(--text-muted); font-size: 0.75rem; font-weight: 500; padding: 0.25rem 0.6rem; border-radius: 4px; }
+        .card-email { font-family: monospace; font-size: 0.85rem; color: var(--accent-light); font-weight: 600; text-decoration: none; }
+        .card-email:hover { text-decoration: underline; }
 
         footer { background: var(--accent); color: #f8fafc; padding: 3rem 0; margin-top: 4rem; border-top: 1px solid var(--border-color); }
         .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; font-size: 0.9rem; }
@@ -84,7 +90,7 @@
 
     <header>
         <div class="container nav-wrapper">
-            <a href="index.html" class="logo">Dr. Elsayed Fathi Moussa</a>
+            <a href="index.html" class="logo">Dr. Elsayed Moussa</a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -98,49 +104,170 @@
     </header>
 
     <main class="container page-section">
-        <div>
-            <h1 class="page-title">Executive Summary Matrix</h1>
-            <p class="section-desc">A structural breakdown of systemic modeling capabilities, specialized frameworks, and cross-border research accolades.</p>
+        <h1 class="page-title">Curriculum Vitae</h1>
+        <p class="page-subtitle">Verbatim archival sections extracted from ElsayedMohamed_CV_06.pdf outlining foundational education, honors, and verified references[cite: 2].</p>
+
+        <!-- SECTION I: EDUCATION -->
+        <h2 class="section-breakdown">I. Education</h2>
+        <div class="education-list">
             
-            <div class="resume-download-box">
-                <a href="ElsayedMohamed_CV_06.pdf" class="btn-download" download>Download Comprehensive CV (PDF)</a>
+            <!-- Degree 1 -->
+            <div class="education-item">
+                <div class="edu-meta">
+                    <h3 class="edu-degree">PhD in Business and Territorial Competitiveness, Innovation, and Sustainability Programme</h3>
+                    <span class="edu-date">SEP 2021 — NOV 2025</span>
+                </div>
+                <div class="edu-institution">Deusto Business School, University of Deusto, Bilbao, Spain (organized jointly with: Universidad Ramon Llull and Universidad Pontificia Comillas)[cite: 2]</div>
+                <div class="edu-details">
+                    <strong>Thesis Title:</strong> Dynamics of Collaborative Governance: A Life Cycle Model from Initiation to Sustainable Practices. (International Doctorate)[cite: 2]
+                </div>
             </div>
 
-            <div class="skills-section">
-                <h3>Expertise Areas & Competencies</h3>
-                <div class="skill-group">
-                    <div class="skill-label">Methodological Focus</div>
-                    <div class="skill-values">Collaborative Governance Lifecycles, Institutional Strategy Architecture, Public Innovation, Multi-Stakeholder Consensus Management.</div>
+            <!-- Degree 2 -->
+            <div class="education-item">
+                <div class="edu-meta">
+                    <h3 class="edu-degree">Dual Master Degree - Master of Business Administration (International Business Management) and Master of Management</h3>
+                    <span class="edu-date">SUMMER 2015 — SPRING 2017</span>
                 </div>
-                <div class="skill-group">
-                    <div class="skill-label">Analytical Systems</div>
-                    <div class="skill-values">ATLAS.ti (Qualitative analysis suites), VOSviewer (Bibliometric network tracking pipelines).</div>
-                </div>
-                <div class="skill-group">
-                    <div class="skill-label">Language Matrix</div>
-                    <div class="skill-values">Arabic (Native), English (Proficient Command), French (Intermediate Operational), Spanish (B1 Threshold Working Proficiency).</div>
-                </div>
+                <div class="edu-institution">Goldey-Beacom College Graduate School, Delaware State, USA[cite: 2]</div>
             </div>
+
+            <!-- Degree 3 -->
+            <div class="education-item">
+                <div class="edu-meta">
+                    <h3 class="edu-degree">Post Graduate Diploma in NGOs Management</h3>
+                    <span class="edu-date">SEP 2018 — MAY 2019</span>
+                </div>
+                <div class="edu-institution">Faculty of Economics and Political Science, Cairo University, Egypt[cite: 2]</div>
+            </div>
+
+            <!-- Degree 4 -->
+            <div class="education-item">
+                <div class="edu-meta">
+                    <h3 class="edu-degree">Post Graduate Diploma in International Negotiations</h3>
+                    <span class="edu-date">SEP 2017 — MAY 2018</span>
+                </div>
+                <div class="edu-institution">Faculty of Economics and Political Science, Cairo University, Egypt[cite: 2]</div>
+            </div>
+
+            <!-- Degree 5 -->
+            <div class="education-item">
+                <div class="edu-meta">
+                    <h3 class="edu-degree">Post Graduate Diploma in Education</h3>
+                    <span class="edu-date">SEP 2017 — MAY 2018</span>
+                </div>
+                <div class="edu-institution">Faculty of Education, Sadat City University, Egypt[cite: 2]</div>
+            </div>
+
+            <!-- Degree 6 -->
+            <div class="education-item">
+                <div class="edu-meta">
+                    <h3 class="edu-degree">Bachelor of Arts</h3>
+                    <span class="edu-date">SEP 1995 — MAY 1999</span>
+                </div>
+                <div class="edu-institution">Faculty of Arts, Menoufia University, Egypt[cite: 2]</div>
+            </div>
+
         </div>
 
-        <div>
-            <div class="contact-card">
-                <h2>Direct Communications</h2>
-                <p class="section-desc" style="font-size:0.95rem; margin-bottom: 2rem;">Available for executive panel configurations, structural public policy tracking advisory tracks, and collaborative scientific initiatives.</p>
-                
-                <div class="contact-link-item">
-                    <span class="contact-label">Academic Mail Address</span>
-                    <a href="mailto:e.mohamed@opendeusto.es" class="contact-url">e.mohamed@opendeusto.es</a>
+        <!-- SECTION II: ACKNOWLEDGEMENTS -->
+        <h2 class="section-breakdown">II. Acknowledgements</h2>
+        <div class="resume-grid">
+            
+            <!-- Honor 1 -->
+            <div class="resume-card">
+                <div>
+                    <h3 class="card-title">Who's Who Laureate</h3>
+                    <p class="card-desc">Laureate of Who's Who among Students in American Universities and Colleges[cite: 2].</p>
                 </div>
-                <div class="contact-link-item">
-                    <span class="contact-label">Secure Contact Number</span>
-                    <span class="contact-url" style="cursor:default; hover:none;">(+34) 645245557</span>
-                </div>
-                <div class="contact-link-item">
-                    <span class="contact-label">Affiliated Institution</span>
-                    <a href="https://www.deusto.es" target="_blank" class="contact-url">Deusto Business School, Spain</a>
+                <div class="card-footer">
+                    <span class="card-tag">2016</span>
                 </div>
             </div>
+
+            <!-- Honor 2 -->
+            <div class="resume-card">
+                <div>
+                    <h3 class="card-title">UNESCO National Commission</h3>
+                    <p class="card-desc">Official Acknowledgement Letter from the Egyptian National Commission for UNESCO[cite: 2].</p>
+                </div>
+                <div class="card-footer">
+                    <span class="card-tag">2021</span>
+                </div>
+            </div>
+
+            <!-- Honor 3 -->
+            <div class="resume-card">
+                <div>
+                    <h3 class="card-title">Diplomatic Commendation (France)</h3>
+                    <p class="card-desc">Certificate of Appreciation and Acknowledgement Letter issued by the Embassy of Egypt in France[cite: 2].</p>
+                </div>
+                <div class="card-footer">
+                    <span class="card-tag">2013</span>
+                </div>
+            </div>
+
+            <!-- Honor 4 -->
+            <div class="resume-card">
+                <div>
+                    <h3 class="card-title">Ministerial Sector Commendation</h3>
+                    <p class="card-desc">Acknowledgement Letter from the Culture Affaires and Missions Sector, Ministry of Higher Education (MOHE)[cite: 2].</p>
+                </div>
+                <div class="card-footer">
+                    <span class="card-tag">2012</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SECTION III: REFERENCES -->
+        <h2 class="section-breakdown">III. Institutional References</h2>
+        <div class="resume-grid">
+            
+            <!-- Ref 1 -->
+            <div class="resume-card">
+                <div>
+                    <h3 class="card-title">Prof. Taco Brandsen</h3>
+                    <p class="card-desc">Radboud University, the Netherlands[cite: 2]</p>
+                </div>
+                <div class="card-footer">
+                    <a href="mailto:taco.brandsen@ru.nl" class="card-email">taco.brandsen@ru.nl</a>
+                </div>
+            </div>
+
+            <!-- Ref 2 -->
+            <div class="resume-card">
+                <div>
+                    <h3 class="card-title">Prof. Iñaki Peña</h3>
+                    <p class="card-desc">University of Deusto, Spain[cite: 2]</p>
+                </div>
+                <div class="card-footer">
+                    <a href="mailto:ipena@deusto.es" class="card-email">ipena@deusto.es</a>
+                </div>
+            </div>
+
+            <!-- Ref 3 -->
+            <div class="resume-card">
+                <div>
+                    <h3 class="card-title">Prof. Asier Minondo</h3>
+                    <p class="card-desc">University of Deusto, Spain[cite: 2]</p>
+                </div>
+                <div class="card-footer">
+                    <a href="mailto:aminondo@deusto.es" class="card-email">aminondo@deusto.es</a>
+                </div>
+            </div>
+
+            <!-- Ref 4 -->
+            <div class="resume-card">
+                <div>
+                    <h3 class="card-title">Dr. Igone Porto Gomez</h3>
+                    <p class="card-desc">UPV/EHU, Spain[cite: 2]</p>
+                </div>
+                <div class="card-footer">
+                    <a href="mailto:igone.porto@ehu.eus" class="card-email">igone.porto@ehu.eus</a>
+                </div>
+            </div>
+
         </div>
     </main>
 
