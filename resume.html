@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- CV Specific SEO Block -->
     <title>Curriculum Vitae | Dr. Elsayed Moussa</title>
     <meta name="description" content="Access the comprehensive professional resume, executive skills matrix, and institutional credentials of Dr. Elsayed Moussa (Sayed Moussa).">
     <meta name="keywords" content="Dr. Elsayed Moussa, Sayed Moussa, Elsayed Moussa, Resume, Curriculum Vitae, Contact, Skills">
@@ -18,19 +13,19 @@
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://sayed-moussa.vercel.app/resume">
 
-    <!-- Typography Assets -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg-color: #fafafa;
+            --bg-color: #fcfbf9;
             --card-bg: #ffffff;
-            --text-main: #2d2d2d;
-            --text-muted: #626262;
-            --accent: #1a1a1a;
-            --border-color: #e5e5e5;
+            --text-main: #1e293b;
+            --text-muted: #475569;
+            --accent: #0f172a;
+            --accent-light: #334155;
+            --border-color: #e2e8f0;
             --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -39,49 +34,57 @@
         .container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
         @media (min-width: 576px) { .container { padding: 0 2rem; } }
 
-        header { border-bottom: 1px solid var(--border-color); background-color: rgba(250, 250, 250, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
+        header { border-bottom: 1px solid var(--border-color); background-color: rgba(252, 251, 249, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
         .nav-wrapper { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0.75rem; padding: 1.25rem 0; }
         @media (min-width: 900px) { .nav-wrapper { flex-direction: row; justify-content: space-between; height: 80px; padding: 0; } }
         .logo { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.35rem; color: var(--accent); text-decoration: none; }
         nav ul { display: flex; flex-wrap: wrap; justify-content: center; list-style: none; gap: 1.25rem; }
         @media (min-width: 576px) { nav ul { gap: 2rem; } }
-        nav a { text-decoration: none; color: var(--text-muted); font-size: 0.85rem; font-weight: 500; transition: var(--transition); position: relative; padding: 0.25rem 0; }
-        @media (min-width: 400px) { nav a { font-size: 0.9rem; } }
+        nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: var(--transition); position: relative; padding: 0.25rem 0; }
         nav a:hover, nav a.active { color: var(--accent); }
-        nav a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1.5px; bottom: -2px; left: 0; background-color: var(--accent); transition: transform 0.25s ease-out; }
 
         .page-section { padding: 3rem 0; display: grid; grid-template-columns: 1fr; gap: 3rem; }
         @media (min-width: 768px) { .page-section { grid-template-columns: 1.2fr 1fr; gap: 4rem; padding: 5rem 0; } }
 
-        .page-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 400; color: var(--accent); margin-bottom: 1.5rem; line-height: 1.2; }
+        .page-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; color: var(--accent); margin-bottom: 1.5rem; line-height: 1.2; }
         @media (min-width: 768px) { .page-title { font-size: 2.8rem; } }
         .section-desc { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2rem; }
 
-        .resume-download-box { background: var(--card-bg); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 6px; margin-bottom: 3rem; text-align: center; }
+        .resume-download-box { background: var(--card-bg); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 6px; margin-bottom: 3rem; text-align: center; box-shadow: 0 2px 12px rgba(15, 23, 42, 0.01); }
         @media (min-width: 576px) { .resume-download-box { padding: 2rem; text-align: left; } }
         .btn-download { display: inline-flex; justify-content: center; background: var(--accent); color: #fff; text-decoration: none; padding: 0.8rem 1.8rem; border-radius: 4px; font-size: 0.9rem; font-weight: 500; transition: var(--transition); width: 100%; }
         @media (min-width: 400px) { .btn-download { width: auto; } }
-        .btn-download:hover { background: #333; transform: translateY(-1px); }
+        .btn-download:hover { background: var(--accent-light); transform: translateY(-1px); }
 
         .skills-section h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 600; }
         .skill-group { margin-bottom: 1.5rem; }
-        .skill-label { font-weight: 500; font-size: 0.95rem; margin-bottom: 0.3rem; }
+        .skill-label { font-weight: 500; font-size: 0.95rem; margin-bottom: 0.3rem; color: var(--accent); }
         .skill-values { color: var(--text-muted); font-size: 0.9rem; }
 
-        .contact-card { background: var(--card-bg); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 6px; }
+        .contact-card { background: var(--card-bg); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 6px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02); }
         @media (min-width: 576px) { .contact-card { padding: 2.5rem; } }
-        .contact-card h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 1.5rem; font-weight: 400; }
+        .contact-card h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 1.5rem; font-weight: 500; color: var(--accent); }
         .contact-link-item { display: flex; flex-direction: column; margin-bottom: 1.5rem; }
         .contact-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); }
-        .contact-url { color: var(--accent); font-weight: 500; text-decoration: none; font-size: 0.95rem; transition: var(--transition); word-break: break-all; }
-        .contact-url:hover { color: var(--text-muted); }
+        .contact-url { color: var(--accent-light); font-weight: 500; text-decoration: none; font-size: 0.95rem; transition: var(--transition); word-break: break-all; }
+        .contact-url:hover { color: var(--accent); }
+
+        footer { background: var(--accent); color: #f8fafc; padding: 3rem 0; margin-top: 4rem; border-top: 1px solid var(--border-color); }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; font-size: 0.9rem; }
+        @media (min-width: 768px) { .footer-grid { grid-template-columns: 1.5fr repeat(3, 1fr); } }
+        .footer-brand h4 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .footer-brand p { color: #94a3b8; font-size: 0.85rem; }
+        .footer-col h5 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; margin-bottom: 1rem; font-weight: 600; }
+        .footer-col p, .footer-col a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; display: block; word-break: break-all; }
+        .footer-col a:hover { color: #ffffff; }
+        .footer-bottom { text-align: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #334155; color: #64748b; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
     <header>
         <div class="container nav-wrapper">
-            <a href="index.html" class="logo">Dr. Elsayed Fathi Moussa</a>
+            <a href="index.html" class="logo">Dr. Elsayed Moussa</a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -96,8 +99,8 @@
 
     <main class="container page-section">
         <div>
-            <h1 class="page-title">Executive Core Qualifications</h1>
-            <p class="section-desc">A brief structural overview of analytical fields, specialized software suites, and international accolades.</p>
+            <h1 class="page-title">Executive Summary Matrix</h1>
+            <p class="section-desc">A structural breakdown of systemic modeling capabilities, specialized frameworks, and cross-border research accolades.</p>
             
             <div class="resume-download-box">
                 <a href="assets/cv.pdf" class="btn-download" download>Download Comprehensive CV (PDF)</a>
@@ -106,31 +109,31 @@
             <div class="skills-section">
                 <h3>Expertise Areas & Competencies</h3>
                 <div class="skill-group">
-                    <div class="skill-label">Fields of Interest</div>
-                    <div class="skill-values">Collaborative Governance, Strategic Management, Public Innovation, Change Architecture, Senior Leadership</div>
+                    <div class="skill-label">Methodological Focus</div>
+                    <div class="skill-values">Collaborative Governance Lifecycles, Institutional Strategy Architecture, Public Innovation, Multi-Stakeholder Consensus Management.</div>
                 </div>
                 <div class="skill-group">
-                    <div class="skill-label">Methodological Software</div>
-                    <div class="skill-values">VOSviewer, ATLAS.ti (Qualitative & Bibliometric analysis tools)</div>
+                    <div class="skill-label">Analytical Systems</div>
+                    <div class="skill-values">ATLAS.ti (Qualitative analysis suites), VOSviewer (Bibliometric network tracking pipelines).</div>
                 </div>
                 <div class="skill-group">
-                    <div class="skill-label">Languages</div>
-                    <div class="skill-values">Arabic (Native), English (Proficient), French (Intermediate), Spanish (B1 Level)</div>
+                    <div class="skill-label">Language Matrix</div>
+                    <div class="skill-values">Arabic (Native), English (Proficient Command), French (Intermediate Operational), Spanish (B1 Threshold Working Proficiency).</div>
                 </div>
             </div>
         </div>
 
         <div>
             <div class="contact-card">
-                <h2>Institutional Contact</h2>
-                <p class="section-desc" style="font-size:0.95rem; margin-bottom: 2rem;">Based in Bilbao, Bizkaia, Spain. Available for panels, strategic policy reviews, and collaborative research initiatives.</p>
+                <h2>Direct Communications</h2>
+                <p class="section-desc" style="font-size:0.95rem; margin-bottom: 2rem;">Available for executive panel configurations, structural public policy tracking advisory tracks, and collaborative scientific initiatives.</p>
                 
                 <div class="contact-link-item">
-                    <span class="contact-label">Academic Mail</span>
+                    <span class="contact-label">Academic Mail Address</span>
                     <a href="mailto:e.mohamed@opendeusto.es" class="contact-url">e.mohamed@opendeusto.es</a>
                 </div>
                 <div class="contact-link-item">
-                    <span class="contact-label">Contact Number</span>
+                    <span class="contact-label">Secure Contact Number</span>
                     <span class="contact-url" style="cursor:default; hover:none;">(+34) 645245557</span>
                 </div>
                 <div class="contact-link-item">
@@ -140,6 +143,30 @@
             </div>
         </div>
     </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h4>Dr. Elsayed Moussa</h4>
+                <p>Public Policy & Governance Architecture</p>
+            </div>
+            <div class="footer-col">
+                <h5>Academic Inquiries</h5>
+                <a href="mailto:e.mohamed@opendeusto.es">e.mohamed@opendeusto.es</a>
+            </div>
+            <div class="footer-col">
+                <h5>Direct Contact</h5>
+                <p>(+34) 645245557</p>
+            </div>
+            <div class="footer-col">
+                <h5>Primary Institution</h5>
+                <a href="https://www.deusto.es" target="_blank">Deusto Business School, Spain</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Dr. Elsayed Moussa. All Rights Reserved. Fully deployed via Vercel.
+        </div>
+    </footer>
 
 </body>
 </html>
