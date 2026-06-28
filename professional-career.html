@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Career & Diplomacy | Dr. Elsayed Moussa</title>
-    <meta name="description" content="Explore the public administration trajectory and international diplomatic appointments held by Elsayed Moussa (Sayed Moussa).">
-    <meta name="keywords" content="Dr. Elsayed Moussa, Sayed Moussa, Elsayed Moussa, Diplomacy, Public Administration, UNESCO, Egypt Ministry of Higher Education">
+    <title>Professional Experience & Credentials | Dr. Elsayed Moussa</title>
+    <meta name="description" content="Complete chronological employment history, diplomatic posts, ministerial execution tracks, and professional certifications of Dr. Elsayed Moussa.">
+    <meta name="keywords" content="Dr. Elsayed Moussa, Sayed Moussa, Ministry of Higher Education, UNESCO, ICESCO, Attaché Madrid, Professional CV, Certifications">
     <meta name="author" content="Dr. Elsayed Moussa">
 
-    <meta property="og:title" content="Professional Career | Dr. Elsayed Moussa">
-    <meta property="og:description" content="Public administration history and diplomatic record of Dr. Elsayed Moussa (Sayed Moussa).">
+    <meta property="og:title" content="Professional Experience & Credentials | Dr. Elsayed Moussa">
+    <meta property="og:description" content="Complete official employment history and technical certifications portfolio.">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://sayed-moussa.vercel.app/professional-career">
 
@@ -42,22 +42,38 @@
         @media (min-width: 576px) { nav ul { gap: 2rem; } }
         nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: var(--transition); position: relative; padding: 0.25rem 0; }
         nav a:hover, nav a.active { color: var(--accent); }
-        nav a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1.5px; bottom: -2px; left: 0; background-color: var(--accent); transition: transform 0.25s ease-out; }
 
         .page-section { padding: 3rem 0; }
         @media (min-width: 768px) { .page-section { padding: 5rem 0; } }
-        .page-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; color: var(--accent); margin-bottom: 1rem; line-height: 1.2; }
+        .page-title { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1.2; font-weight: 500; color: var(--accent); margin-bottom: 1rem; }
         @media (min-width: 768px) { .page-title { font-size: 2.8rem; } }
-        .page-subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 3rem; max-width: 600px; }
+        .page-subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 3rem; max-width: 700px; }
         @media (min-width: 768px) { .page-subtitle { font-size: 1.1rem; margin-bottom: 4rem; } }
 
-        .timeline { display: flex; flex-direction: column; gap: 2rem; }
-        .timeline-item { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.5rem; display: grid; grid-template-columns: 1fr; gap: 1rem; box-shadow: 0 2px 12px rgba(15, 23, 42, 0.01); }
-        @media (min-width: 768px) { .timeline-item { grid-template-columns: 200px 1fr; padding: 2.5rem; gap: 2rem; } }
-        .time-frame { font-weight: 600; font-size: 0.95rem; color: var(--accent-light); }
-        .timeline-content h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--accent); }
-        .institution-sub { font-weight: 500; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; }
-        .timeline-desc { color: var(--text-muted); font-size: 0.95rem; }
+        .section-breakdown { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--accent); margin: 4rem 0 1.5rem 0; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; }
+        
+        .employment-list { display: flex; flex-direction: column; gap: 2rem; }
+        .employment-item { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 2rem; transition: var(--transition); box-shadow: 0 2px 12px rgba(15, 23, 42, 0.01); }
+        .employment-item:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(15,23,42,0.04); border-color: var(--accent-light); }
+        
+        .emp-meta { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; margin-bottom: 1rem; gap: 0.5rem; }
+        .emp-title-group { display: flex; flex-direction: column; }
+        .emp-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; color: var(--accent); }
+        .emp-institution { font-size: 1rem; font-weight: 500; color: var(--accent-light); margin-top: 0.25rem; }
+        .emp-date { background: #e2e8f0; color: var(--accent); font-size: 0.8rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 4px; white-space: nowrap; }
+        
+        .emp-duties { list-style-type: none; padding-left: 0; }
+        .emp-duties li { position: relative; padding-left: 1.25rem; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.95rem; }
+        .emp-duties li::before { content: "—"; position: absolute; left: 0; color: var(--accent-light); }
+
+        .projects-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+        @media (min-width: 768px) { .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; } }
+        .project-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition); box-shadow: 0 2px 12px rgba(15, 23, 42, 0.01); }
+        .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(15,23,42,0.06); border-color: var(--accent-light); }
+        .project-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; color: var(--accent); margin-bottom: 0.5rem; line-height: 1.4; }
+        .project-desc { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tech-tag { background: #f1f5f9; color: var(--text-muted); font-size: 0.75rem; font-weight: 500; padding: 0.25rem 0.6rem; border-radius: 4px; }
 
         footer { background: var(--accent); color: #f8fafc; padding: 3rem 0; margin-top: 4rem; border-top: 1px solid var(--border-color); }
         .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; font-size: 0.9rem; }
@@ -74,7 +90,7 @@
 
     <header>
         <div class="container nav-wrapper">
-            <a href="index.html" class="logo">Dr. Elsayed Fathi Moussa</a>
+            <a href="index.html" class="logo">Dr. Elsayed Moussa</a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -88,36 +104,284 @@
     </header>
 
     <main class="container page-section">
-        <h1 class="page-title">Public Administration & Diplomatic History</h1>
-        <p class="page-subtitle">Synthesizing 15 years of state-level strategy alignment, regional structural blueprints, and cross-border partnerships.</p>
+        <h1 class="page-title">Professional Milestones & Credentials</h1>
+        <p class="page-subtitle">A comprehensive chronological record spanning nearly 15 years of public administration, senior executive leadership, diplomatic nominations, and continuous professional development[cite: 1].</p>
 
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="time-frame">2021 (Apr &mdash; Dec)</div>
-                <div class="timeline-content">
-                    <h2>Assistant Secretary-General</h2>
-                    <div class="institution-sub">Egyptian National Commission for UNESCO, ALECSO, & ICESCO</div>
-                    <p class="timeline-desc">Directed operational pathways, optimized budgetary resource blueprints ($250,000 localized deployment funds), and managed structural interministerial brief updates across multiple intergovernmental assemblies.</p>
+        <!-- SECTION I: COMPLETE EMPLOYMENT HISTORY -->
+        <h2 class="section-breakdown">I. Employment History</h2>
+        <div class="employment-list">
+            
+            <!-- Job 1 -->
+            <div class="employment-item">
+                <div class="emp-meta">
+                    <div class="emp-title-group">
+                        <h3 class="emp-title">Research Fellow</h3>
+                        <span class="emp-institution">Deusto Business School, University of Deusto, Bilbao, Spain</span>
+                    </div>
+                    <span class="emp-date">FEB 2022 — FEB 2026</span>
+                </div>
+                <ul class="emp-duties">
+                    <li>Member of the Competitiveness and Economic Development research group[cite: 1].</li>
+                    <li>Research dedicated to collaborative governance, public policy, collective decision making, public innovation, leadership, and strategic management[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="employment-item">
+                <div class="emp-meta">
+                    <div class="emp-title-group">
+                        <h3 class="emp-title">Assistant Secretary-General</h3>
+                        <span class="emp-institution">Egyptian National Commission for UNESCO, ALECSO, & ICESCO, Egypt</span>
+                    </div>
+                    <span class="emp-date">APR 2021 — DEC 2021</span>
+                </div>
+                <ul class="emp-duties">
+                    <li>Participate in the strategic planning for the Commission's goals and objectives[cite: 1].</li>
+                    <li>Manage and supervise the work of the different sectors within the Commission[cite: 1].</li>
+                    <li>Manage and supervise the planning and implementation of UNESCO, ALECSO, and ICESCO participation projects (Approximately 250,000.00 USD fund per year)[cite: 1].</li>
+                    <li>Follow up with the specialized sub-committees of the Commission[cite: 1].</li>
+                    <li>Participate in the preparation for UNESCO Executive Board and General Assembly conferences and meetings, as well as ICESCO and ALECSO conferences and meetings[cite: 1].</li>
+                    <li>Follow up on the activities of centers and clubs associated with UNESCO[cite: 1].</li>
+                    <li>Supervise meetings and communications with Egyptian ministries, stakeholders, and international organizations[cite: 1].</li>
+                    <li>Supervise the Commission's media platforms (website, media statements, social media)[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Job 3 -->
+            <div class="employment-item">
+                <div class="emp-meta">
+                    <div class="emp-title-group">
+                        <h3 class="emp-title">Diplomat (Attaché)</h3>
+                        <span class="emp-institution">Egyptian Institute and Cultural Office, Embassy of Egypt, Madrid, Spain</span>
+                    </div>
+                    <span class="emp-date">MAR 2020 — MAR 2021</span>
+                </div>
+                <ul class="emp-duties">
+                    <li>Manage and coordinate financial and administrative processes[cite: 1].</li>
+                    <li>Responsible for financing Egyptian sponsored students in Spanish universities[cite: 1].</li>
+                    <li>Participate in organizing educational and cultural events and meetings[cite: 1].</li>
+                    <li>Manage financial resources and budgeting[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Job 4 -->
+            <div class="employment-item">
+                <div class="emp-meta">
+                    <div class="emp-title-group">
+                        <h3 class="emp-title">Senior Specialist for Education and Social Science</h3>
+                        <span class="emp-institution">Egyptian National Commission for UNESCO, ALECSO, & ICESCO, Egypt</span>
+                    </div>
+                    <span class="emp-date">MAY 2018 — FEB 2020</span>
+                </div>
+                <ul class="emp-duties">
+                    <li>Carry out UNESCO Fellowships, Prizes, and Conferences related to the education field[cite: 1].</li>
+                    <li>Participate in drafting and submission of fund proposals to international organizations[cite: 1].</li>
+                    <li>Participate in UNESCO participation projects and other activities organized or co-organized by the Commission[cite: 1].</li>
+                    <li>Communicate and coordinate with stakeholders, partner organizations, and national authorities, as well as international and regional organizations[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Job 5 -->
+            <div class="employment-item">
+                <div class="emp-meta">
+                    <div class="emp-title-group">
+                        <h3 class="emp-title">Senior Specialist for Cultural & Educational Agreements and Global Cooperation</h3>
+                        <span class="emp-institution">Ministry of Higher Education and Scientific Research, Egypt</span>
+                    </div>
+                    <span class="emp-date">MAY 2017 — APR 2018</span>
+                </div>
+                <ul class="emp-duties">
+                    <li>Responsible for drafting and negotiating Cultural & Educational Agreements, Executive Programmes, and MoUs between Egypt and Commonwealth countries[cite: 1].</li>
+                    <li>Representative at the Annual Joint Committees between Egypt and Commonwealth countries organized by the Egyptian Ministry of International Cooperation[cite: 1].</li>
+                    <li>Coordinate with other Egyptian institutions and authorities in regards to Egyptian educational and cultural relations[cite: 1].</li>
+                    <li>Help in the implementation of the Agreements' outputs[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Job 6 -->
+            <div class="employment-item">
+                <div class="emp-meta">
+                    <div class="emp-title-group">
+                        <h3 class="emp-title">Study Leave (Master)</h3>
+                        <span class="emp-institution">Goldey-Beacom College Graduate School, Delaware State, USA</span>
+                    </div>
+                    <span class="emp-date">MAY 2015 — MAY 2017</span>
+                </div>
+                <ul class="emp-duties">
+                    <li>Pursued dual Master's degree studies under authorized educational leave provisions[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Job 7 -->
+            <div class="employment-item">
+                <div class="emp-meta">
+                    <div class="emp-title-group">
+                        <h3 class="emp-title">Diplomat (Attaché)</h3>
+                        <span class="emp-institution">Egyptian Institute and Cultural Office, Embassy of Egypt, Madrid, Spain</span>
+                    </div>
+                    <span class="emp-date">OCT 2011 — OCT 2013</span>
+                </div>
+                <ul class="emp-duties">
+                    <li>Manage and coordinate financial and administrative processes[cite: 1].</li>
+                    <li>Manage the Egyptian School in France for the 2011/2012 and 2012/2013 academic years[cite: 1].</li>
+                    <li>Initiate and coordinate the Teaching Arabic for Non-Native Speakers Program[cite: 1].</li>
+                    <li>Participate in organizing several educational and cultural events and meetings[cite: 1].</li>
+                    <li>Manage financial resources and budgeting[cite: 1].</li>
+                    <li>Initiate a financial and administrative Database Filling System[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Job 8 -->
+            <div class="employment-item">
+                <div class="emp-meta">
+                    <div class="emp-title-group">
+                        <h3 class="emp-title">Head of the Marketing of Educational Egyptian Services Unit</h3>
+                        <span class="emp-institution">Ministry of Higher Education and Scientific Research, Egypt</span>
+                    </div>
+                    <span class="emp-date">JAN 2011 — OCT 2011</span>
+                </div>
+                <ul class="emp-duties">
+                    <li>Participate in planning and implementing marketing strategies and campaigns for Egyptian higher education institution services[cite: 1].</li>
+                    <li>Prepare marketing materials and required transactional information[cite: 1].</li>
+                    <li>Provide professional consultations and organizational assessments[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Job 9 -->
+            <div class="employment-item">
+                <div class="emp-meta">
+                    <div class="emp-title-group">
+                        <h3 class="emp-title">Part-Time Translator</h3>
+                        <span class="emp-institution">UNESCO International Publications Center, Egypt</span>
+                    </div>
+                    <span class="emp-date">JAN 2008 — OCT 2011</span>
+                </div>
+                <ul class="emp-duties">
+                    <li>Translate high-level articles and scholarly publications produced by UNESCO's panels of experts[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Job 10 -->
+            <div class="employment-item">
+                <div class="emp-meta">
+                    <div class="emp-title-group">
+                        <h3 class="emp-title">Education and Culture Cooperation Specialist and Researcher</h3>
+                        <span class="emp-institution">Ministry of Higher Education and Scientific Research, Egypt</span>
+                    </div>
+                    <span class="emp-date">MAR 2001 — DEC 2007</span>
+                </div>
+                <ul class="emp-duties">
+                    <li>Research and study educational and cultural relations and cooperation protocols between Egypt and global states[cite: 1].</li>
+                    <li>Provide policy consultations to decision-makers regarding educational and cultural agreements and frameworks[cite: 1].</li>
+                    <li>Analyze and evaluate operational outputs of Egyptian educational and cultural offices worldwide[cite: 1].</li>
+                    <li>Member of the Teaching Arabic to Non-Native Speakers Committee[cite: 1].</li>
+                    <li>Member of Marketing the Egyptian Educational Services Initiative[cite: 1].</li>
+                    <li>Representative at several conferences and symposiums held by higher education institutions[cite: 1].</li>
+                    <li>Translate foundational research, studies, and state cooperation agreements[cite: 1].</li>
+                    <li>Participate in preparing and editing several official publications issued by the Ministry of Higher Education, Egypt: "Ishraqa" quarterly journal, "Guide to Higher Education in Egypt" (2002, 2005, 2007 editions), "Al Waqaa' Al Thaqafiya" monthly review, and "Guide to Study and Life in Egypt"[cite: 1].</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- SECTION II: CERTIFICATIONS, COURSES & TRAINING -->
+        <h2 class="section-breakdown">II. Certifications, Training & Courses</h2>
+        <div class="projects-grid">
+            
+            <!-- Cert 1 -->
+            <div class="project-card">
+                <div>
+                    <h3 class="project-title">The Executive Presidential Leadership Program (EPLP)</h3>
+                    <p class="project-desc">Highly selective executive training track, Batch 2, administered by the Egyptian National Training Academy (NTA), Egyptian Presidency[cite: 1].</p>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Nov 2019 — Sep 2020</span>
                 </div>
             </div>
 
-            <div class="timeline-item">
-                <div class="time-frame">2020 &mdash; 2021</div>
-                <div class="timeline-content">
-                    <h2>Diplomat (Attaché)</h2>
-                    <div class="institution-sub">Egyptian Cultural Bureau, Embassy of Egypt (Madrid, Spain)</div>
-                    <p class="timeline-desc">Supervised structural fund tracking, academic sponsorship systems, and targeted continental networking frameworks across European research nodes.</p>
+            <!-- Cert 2 -->
+            <div class="project-card">
+                <div>
+                    <h3 class="project-title">Adapting to Changing Contexts: International Security & Cyber Policy</h3>
+                    <p class="project-desc">Executive course covering strategic international security dynamics, regulatory legal suites, and cybersecurity frameworks[cite: 1].</p>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Geneva Center for Security Policy, Switzerland</span>
+                    <span class="tech-tag">2020</span>
                 </div>
             </div>
 
-            <div class="timeline-item">
-                <div class="time-frame">2017 &mdash; 2020</div>
-                <div class="timeline-content">
-                    <h2>Senior Specialist Tracks</h2>
-                    <div class="institution-sub">Ministry of Higher Education / National Commissions</div>
-                    <p class="timeline-desc">Drafted multinational executive memorandums of understanding (MoUs) and organized policy design modules within global developmental strategy blocks.</p>
+            <!-- Cert 3 -->
+            <div class="project-card">
+                <div>
+                    <h3 class="project-title">Seminar for Young & Middle-aged Education Officials</h3>
+                    <p class="project-desc">Specialized global leadership seminar focused on administrative systems and governance setups for developing countries[cite: 1].</p>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Jilin University, PR China</span>
+                    <span class="tech-tag">2018</span>
                 </div>
             </div>
+
+            <!-- Cert 4 -->
+            <div class="project-card">
+                <div>
+                    <h3 class="project-title">Professional Certificate in Human Resource Management</h3>
+                    <p class="project-desc">Strategic workforce management, operational organizational capacity engineering, and talent metric design[cite: 1].</p>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">RCSC, Cairo University</span>
+                    <span class="tech-tag">2014</span>
+                </div>
+            </div>
+
+            <!-- Cert 5 -->
+            <div class="project-card">
+                <div>
+                    <h3 class="project-title">Jean Monnet Module: Euro-Mediterranean Relations</h3>
+                    <p class="project-desc">Advanced program evaluating the strategic geopolitical configurations and regional policies from a Southern perspective[cite: 1].</p>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Euro-Med Program, Cairo University</span>
+                    <span class="tech-tag">2014</span>
+                </div>
+            </div>
+
+            <!-- Cert 6 -->
+            <div class="project-card">
+                <div>
+                    <h3 class="project-title">Development of Supervision Management Skills</h3>
+                    <p class="project-desc">Institutional capability building and leadership framework development for managerial specialists[cite: 1].</p>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Ministry of Higher Education</span>
+                    <span class="tech-tag">2014</span>
+                </div>
+            </div>
+
+            <!-- Cert 7 -->
+            <div class="project-card">
+                <div>
+                    <h3 class="project-title">Summer Scholarship for Italian Language</h3>
+                    <p class="project-desc">Awarded intensive language residency and linguistic systems acquisition program[cite: 1].</p>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">l'Universita per Stranieri di Perugia, Italy</span>
+                    <span class="tech-tag">2010</span>
+                </div>
+            </div>
+
+            <!-- Cert 8 -->
+            <div class="project-card">
+                <div>
+                    <h3 class="project-title">Technical Competency & Research Programs</h3>
+                    <p class="project-desc">Completed sequential specialized professional paths: Reports Writing & Techniques (2006) and Preparing Educational & Cultural Researches (2004)[cite: 1].</p>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">MOHE Frameworks</span>
+                </div>
+            </div>
+
         </div>
     </main>
 
