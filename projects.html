@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Publications Specific SEO Block -->
-    <title>Publications & Initiatives | Dr. Elsayed Moussa</title>
-    <meta name="description" content="Peer-reviewed literature, articles, and policy design initiatives authored by Dr. Elsayed Moussa (Sayed Moussa) regarding governance systems.">
-    <meta name="keywords" content="Dr. Elsayed Moussa, Sayed Moussa, Elsayed Moussa, Governance Life Cycle, IJPSM, Publications, Policy Research">
+    <title>Publications, Campaigns & Initiatives | Dr. Elsayed Moussa</title>
+    <meta name="description" content="Peer-reviewed literature, state policy books, and international summit initiatives directed by Dr. Elsayed Moussa (Sayed Moussa).">
+    <meta name="keywords" content="Dr. Elsayed Moussa, Sayed Moussa, Elsayed Moussa, ICESCO, UNESCO, Higher Education Egypt, Governance, Publications">
     <meta name="author" content="Dr. Elsayed Moussa">
 
-    <meta property="og:title" content="Publications & Projects | Dr. Elsayed Moussa">
-    <meta property="og:description" content="Scientific papers and comparative policy projects written by Elsayed Moussa (Sayed Moussa).">
+    <meta property="og:title" content="Publications & Initiatives | Dr. Elsayed Moussa">
+    <meta property="og:description" content="Comprehensive academic and state-level project portfolio of Elsayed Moussa (Sayed Moussa).">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://sayed-moussa.vercel.app/projects">
 
-    <!-- Typography Assets -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg-color: #fafafa;
+            --bg-color: #fcfbf9;
             --card-bg: #ffffff;
-            --text-main: #2d2d2d;
-            --text-muted: #626262;
-            --accent: #1a1a1a;
-            --border-color: #e5e5e5;
+            --text-main: #1e293b;
+            --text-muted: #475569;
+            --accent: #0f172a;
+            --accent-light: #334155;
+            --border-color: #e2e8f0;
             --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -39,44 +34,53 @@
         .container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
         @media (min-width: 576px) { .container { padding: 0 2rem; } }
 
-        header { border-bottom: 1px solid var(--border-color); background-color: rgba(250, 250, 250, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
+        header { border-bottom: 1px solid var(--border-color); background-color: rgba(252, 251, 249, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
         .nav-wrapper { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0.75rem; padding: 1.25rem 0; }
         @media (min-width: 900px) { .nav-wrapper { flex-direction: row; justify-content: space-between; height: 80px; padding: 0; } }
         .logo { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.35rem; color: var(--accent); text-decoration: none; }
         nav ul { display: flex; flex-wrap: wrap; justify-content: center; list-style: none; gap: 1.25rem; }
         @media (min-width: 576px) { nav ul { gap: 2rem; } }
-        nav a { text-decoration: none; color: var(--text-muted); font-size: 0.85rem; font-weight: 500; transition: var(--transition); position: relative; padding: 0.25rem 0; }
-        @media (min-width: 400px) { nav a { font-size: 0.9rem; } }
+        nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: var(--transition); position: relative; padding: 0.25rem 0; }
         nav a:hover, nav a.active { color: var(--accent); }
-        nav a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1.5px; bottom: -2px; left: 0; background-color: var(--accent); transition: transform 0.25s ease-out; }
-        nav a:hover::after, nav a.active::after { transform: scaleX(1); }
 
         .page-section { padding: 3rem 0; }
         @media (min-width: 768px) { .page-section { padding: 5rem 0; } }
-        .page-title { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1.2; font-weight: 400; color: var(--accent); margin-bottom: 1rem; }
+        .page-title { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1.2; font-weight: 500; color: var(--accent); margin-bottom: 1rem; }
         @media (min-width: 768px) { .page-title { font-size: 2.8rem; } }
-        .page-subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 2.5rem; max-width: 600px; }
+        .page-subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 3rem; max-width: 700px; }
         @media (min-width: 768px) { .page-subtitle { font-size: 1.1rem; margin-bottom: 4rem; } }
 
+        .section-breakdown { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--accent); margin: 3.5rem 0 1.5rem 0; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; }
+        
         .projects-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
         @media (min-width: 768px) { .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; } }
 
-        .project-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition); }
+        .project-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition); box-shadow: 0 2px 12px rgba(15, 23, 42, 0.01); }
         @media (min-width: 576px) { .project-card { padding: 2.5rem; } }
-        .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.02); border-color: #adadad; }
+        .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(15,23,42,0.06); border-color: var(--accent-light); }
 
-        .project-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 600; color: var(--accent); margin-bottom: 1rem; }
+        .project-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 600; color: var(--accent); margin-bottom: 1rem; line-height: 1.4; }
         .project-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
-        .tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
-        .tech-tag { background: #f0f0f0; color: var(--text-main); font-size: 0.78rem; font-weight: 500; padding: 0.3rem 0.75rem; border-radius: 4px; }
-        .project-link { text-decoration: none; color: var(--accent); font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.5rem 0; }
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+        .tech-tag { background: #e2e8f0; color: var(--accent); font-size: 0.78rem; font-weight: 500; padding: 0.3rem 0.75rem; border-radius: 4px; }
+        .project-link { text-decoration: none; color: var(--accent-light); font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.5rem 0; }
+
+        footer { background: var(--accent); color: #f8fafc; padding: 3rem 0; margin-top: 4rem; border-top: 1px solid var(--border-color); }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; font-size: 0.9rem; }
+        @media (min-width: 768px) { .footer-grid { grid-template-columns: 1.5fr repeat(3, 1fr); } }
+        .footer-brand h4 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .footer-brand p { color: #94a3b8; font-size: 0.85rem; }
+        .footer-col h5 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; margin-bottom: 1rem; font-weight: 600; }
+        .footer-col p, .footer-col a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; display: block; word-break: break-all; }
+        .footer-col a:hover { color: #ffffff; }
+        .footer-bottom { text-align: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #334155; color: #64748b; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
     <header>
         <div class="container nav-wrapper">
-            <a href="index.html" class="logo">Dr. Elsayed Fathi Moussa</a>
+            <a href="index.html" class="logo">Dr. Elsayed Moussa</a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -90,268 +94,135 @@
     </header>
 
     <main class="container page-section">
-        <h1 class="page-title">Academic Production & Initiatives</h1>
-        <p class="page-subtitle">Selected peer-reviewed articles, ongoing legislative analyses, and global forum moderation frameworks.</p>
+        <h1 class="page-title">Comprehensive Production & Initiatives</h1>
+        <p class="page-subtitle">A balanced portfolio mapping peer-reviewed scientific breakthroughs alongside large-scale state campaigns, intergovernmental conventions, and published ministerial editions.</p>
 
+        <h2 class="section-breakdown">I. Scientific Literature & Working Papers</h2>
         <div class="projects-grid">
-            <!-- Project 1 -->
             <div class="project-card">
                 <div>
                     <h2 class="project-title">Collaborative Governance in the Public Sector: Trends and Dynamics</h2>
-                    <p class="project-desc">A deep empirical literature study detailing evolving structural paradigms and global operational pathways within state frameworks.</p>
+                    <p class="project-desc">A rigorous global systemic review mapping key intersections between multi-sector networks and modern public administration infrastructures.</p>
                     <div class="tech-stack">
-                        <span class="tech-tag">IJBE Journal</span>
-                        <span class="tech-tag">Systematic Review</span>
+                        <span class="tech-tag">IJBE Journal (2026)</span>
+                        <span class="tech-tag">Co-Authored Review</span>
                     </div>
                 </div>
                 <a href="https://doi.org/10.1504/IJBE.2025.10072097" target="_blank" class="project-link">View Publication &rarr;</a>
             </div>
 
-            <!-- Project 2 -->
             <div class="project-card">
                 <div>
                     <h2 class="project-title">The Dynamics of Collaborative Governance: A Life Cycle Perspective</h2>
-                    <p class="project-desc">Published work mapping long-range configurations from initial operational framework launch blocks to sustainable practices.</p>
+                    <p class="project-desc">Empirical tracking models illustrating structural adjustments and survival elements as governance ecosystems evolve from initiation to permanence.</p>
                     <div class="tech-stack">
-                        <span class="tech-tag">IJPSM Journal</span>
-                        <span class="tech-tag">Life Cycle Modeling</span>
+                        <span class="tech-tag">IJPSM Journal (2026)</span>
+                        <span class="tech-tag">Lifecycle Architecture</span>
                     </div>
                 </div>
                 <a href="https://doi.org/10.1108/IJPSM-01-2025-0037" target="_blank" class="project-link">View Publication &rarr;</a>
             </div>
 
-            <!-- Project 3 -->
             <div class="project-card">
                 <div>
                     <h2 class="project-title">Bottom-up Agenda Setting: Citizen Legislative Initiatives</h2>
-                    <p class="project-desc">A comprehensive policy study parsing citizen-led legislative frameworks specifically within the Basque Country regional ecosystem.</p>
+                    <p class="project-desc">An empirical analysis evaluating regional public-driven legislative setups within the specific framework of the Basque Country.</p>
                     <div class="tech-stack">
                         <span class="tech-tag">IRAS Review</span>
-                        <span class="tech-tag">Policy Agenda</span>
+                        <span class="tech-tag">Under Peer Review</span>
                     </div>
                 </div>
-                <span class="project-link" style="color:var(--text-muted);">Under Review</span>
+                <span class="project-link" style="color:var(--text-muted);">Status: Submitted</span>
             </div>
 
-            <!-- Project 4 -->
             <div class="project-card">
                 <div>
-                    <h2 class="project-title">Building Collaboration Before It Starts</h2>
-                    <p class="project-desc">Methodological investigation using thematic analysis and Fuzzy-set Qualitative Comparative Analysis (fsQCA).</p>
+                    <h2 class="project-title">Building Collaboration Before It Starts: Preparatory Pathways</h2>
+                    <p class="project-desc">Mixed-method diagnostic exploration using fsQCA (Fuzzy-set Qualitative Comparative Analysis) to evaluate critical precursor settings for strong forum launches.</p>
                     <div class="tech-stack">
-                        <span class="tech-tag">Work In Progress</span>
-                        <span class="tech-tag">fsQCA Modeling</span>
+                        <span class="tech-tag">Thematic Synthesis</span>
+                        <span class="tech-tag">fsQCA Configuration</span>
                     </div>
                 </div>
-                <span class="project-link" style="color:var(--text-muted);">In Progress</span>
+                <span class="project-link" style="color:var(--text-muted);">Status: Work in Progress</span>
             </div>
         </div>
-    </main>
 
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects & Economic Insights</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-color: #fafafa;
-            --card-bg: #ffffff;
-            --text-main: #2d2d2d;
-            --text-muted: #626262;
-            --accent: #1a1a1a;
-            --border-color: #e5e5e5;
-            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container { 
-            max-width: 1100px; 
-            margin: 0 auto; 
-            padding: 0 1.25rem; 
-        }
-        @media (min-width: 576px) { .container { padding: 0 2rem; } }
-
-        /* Navigation Header - Fully Unified 5-Item Responsive Menu */
-        header {
-            border-bottom: 1px solid var(--border-color);
-            background-color: rgba(250, 250, 250, 0.8);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0; 
-            z-index: 100;
-        }
-        .nav-wrapper { 
-            display: flex; 
-            flex-direction: column;
-            justify-content: center; 
-            align-items: center; 
-            gap: 0.75rem;
-            padding: 1.25rem 0;
-        }
-        @media (min-width: 900px) {
-            .nav-wrapper {
-                flex-direction: row;
-                justify-content: space-between;
-                height: 80px;
-                padding: 0;
-            }
-        }
-
-        .logo { 
-            font-family: 'Playfair Display', serif; 
-            font-weight: 600; 
-            font-size: 1.35rem; 
-            color: var(--accent); 
-            text-decoration: none; 
-        }
-        nav ul { 
-            display: flex; 
-            flex-wrap: wrap;
-            justify-content: center;
-            list-style: none; 
-            gap: 1.25rem; 
-        }
-        @media (min-width: 576px) { nav ul { gap: 2rem; } }
-        
-        nav a { 
-            text-decoration: none; 
-            color: var(--text-muted); 
-            font-size: 0.85rem; 
-            font-weight: 500; 
-            transition: var(--transition); 
-            position: relative; 
-            padding: 0.25rem 0;
-        }
-        @media (min-width: 400px) { nav a { font-size: 0.9rem; } }
-        nav a:hover, nav a.active { color: var(--accent); }
-        nav a::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1.5px; bottom: -2px; left: 0; background-color: var(--accent); transition: transform 0.25s ease-out; }
-        nav a:hover::after, nav a.active::after { transform: scaleX(1); }
-
-        /* Content Layout */
-        .page-section { padding: 3rem 0; }
-        @media (min-width: 768px) { .page-section { padding: 5rem 0; } }
-
-        .page-title { 
-            font-family: 'Playfair Display', serif; 
-            font-size: 2rem; 
-            line-height: 1.2;
-            font-weight: 400; 
-            color: var(--accent); 
-            margin-bottom: 1rem; 
-        }
-        @media (min-width: 768px) { .page-title { font-size: 2.8rem; } }
-
-        .page-subtitle { 
-            color: var(--text-muted); 
-            font-size: 1rem; 
-            margin-bottom: 2.5rem; 
-            max-width: 600px; 
-        }
-        @media (min-width: 768px) { .page-subtitle { font-size: 1.1rem; margin-bottom: 4rem; } }
-
-        /* Grid System */
-        .projects-grid { 
-            display: grid; 
-            grid-template-columns: 1fr; 
-            gap: 1.5rem; 
-        }
-        @media (min-width: 768px) { .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; } }
-
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: var(--transition);
-        }
-        @media (min-width: 576px) { .project-card { padding: 2.5rem; } }
-        
-        .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.02);
-            border-color: #adadad;
-        }
-
-        .project-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 600; color: var(--accent); margin-bottom: 1rem; }
-        @media (min-width: 576px) { .project-title { font-size: 1.5rem; } }
-        
-        .project-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
-        
-        .tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
-        .tech-tag { background: #f0f0f0; color: var(--text-main); font-size: 0.78rem; font-weight: 500; padding: 0.3rem 0.75rem; border-radius: 4px; }
-
-        .project-link { text-decoration: none; color: var(--accent); font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.5rem 0; }
-        .project-link:hover { opacity: 0.7; }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="container nav-wrapper">
-            <a href="index.html" class="logo">John Doe</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="academic-career.html">Academic Career</a></li>
-                    <li><a href="professional-career.html">Professional Career</a></li>
-                    <li><a href="projects.html" class="active">Projects</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container page-section">
-        <h1 class="page-title">Selected Projects & Analyses</h1>
-        <p class="page-subtitle">A curation of quantitative models, industry reports, and macroeconomic analysis applied to global financial climates and public policy parameters.</p>
-
+        <h2 class="section-breakdown">II. International Initiatives & State Publications</h2>
         <div class="projects-grid">
             <div class="project-card">
                 <div>
-                    <h2 class="project-title">Macroeconomic Inflation Forecasting Model</h2>
-                    <p class="project-desc">Developed a dynamic predictive index parsing structural supply chain constraints and fiscal policy shifts to map multi-quarter core CPI trajectory profiles.</p>
+                    <h2 class="project-title">The 14th ICESCO General Conference Coordination</h2>
+                    <p class="project-desc">Served as a central state organizer for the Islamic World Educational, Scientific and Cultural Organization General Conference assemblies held in Egypt.</p>
                     <div class="tech-stack">
-                        <span class="tech-tag">Time-Series Analytics</span>
-                        <span class="tech-tag">R Studio</span>
-                        <span class="tech-tag">Fiscal Policy Brief</span>
+                        <span class="tech-tag">Intergovernmental Summit</span>
+                        <span class="tech-tag">December 2021</span>
                     </div>
                 </div>
-                <a href="#" class="project-link">Read Full Report &rarr;</a>
+                <span class="project-link" style="color:var(--text-muted);">Organizing Member</span>
             </div>
 
             <div class="project-card">
                 <div>
-                    <h2 class="project-title">Emerging Market Risk Assessment Matrix</h2>
-                    <p class="project-desc">Conducted an extensive empirical data evaluation analyzing financial volatility, sovereign credit trajectories, and regulatory adjustments in regional markets.</p>
+                    <h2 class="project-title">Regional Forum & Expert Strategy Meeting for Open Science</h2>
+                    <p class="project-desc">Coordinated framework modalities, cross-border system challenges, and regional infrastructure openings across Arab States via UNESCO channels.</p>
                     <div class="tech-stack">
-                        <span class="tech-tag">Econometrics</span>
-                        <span class="tech-tag">Stata</span>
-                        <span class="tech-tag">Corporate Strategy</span>
+                        <span class="tech-tag">UNESCO Regional Node</span>
+                        <span class="tech-tag">September 2021</span>
                     </div>
                 </div>
-                <a href="#" class="project-link">View Case Study &rarr;</a>
+                <span class="project-link" style="color:var(--text-muted);">Organizing Committee</span>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <h2 class="project-title">State Higher Education Media & Publication Design</h2>
+                    <p class="project-desc">Directly prepared, co-edited, and managed official core guidebooks and literary periodicals issued at institutional level for the Egyptian Ministry.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">"Ishraqa" Journal</span>
+                        <span class="tech-tag">Guide to Higher Education in Egypt</span>
+                    </div>
+                </div>
+                <span class="project-link" style="color:var(--text-muted);">Editorial & Content Lead</span>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <h2 class="project-title">Global Marketing of Egyptian Educational Services Initiative</h2>
+                    <p class="project-desc">Designed marketing campaigns, structured analytical consultations, and directed foreign service evaluation suites across worldwide strategic offices.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Strategic Ministry Task</span>
+                        <span class="tech-tag">Institutional Campaigns</span>
+                    </div>
+                </div>
+                <span class="project-link" style="color:var(--text-muted);">Unit Leadership Record</span>
             </div>
         </div>
     </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h4>Dr. Elsayed Moussa</h4>
+                <p>Public Policy & Governance Architecture</p>
+            </div>
+            <div class="footer-col">
+                <h5>Academic Inquiries</h5>
+                <a href="mailto:e.mohamed@opendeusto.es">e.mohamed@opendeusto.es</a>
+            </div>
+            <div class="footer-col">
+                <h5>Direct Contact</h5>
+                <p>(+34) 645245557</p>
+            </div>
+            <div class="footer-col">
+                <h5>Primary Institution</h5>
+                <a href="https://www.deusto.es" target="_blank">Deusto Business School, Spain</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Dr. Elsayed Moussa. All Rights Reserved. Fully deployed via Vercel.
+        </div>
+    </footer>
 
 </body>
 </html>
